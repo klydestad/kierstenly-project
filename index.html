@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Kiersten Lyde-Stad
+        </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Kiersten Lyde-Stad</div>
+        <div class="hamburger menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="/assets/profile-pic.png" alt="Kiersten Lyde-Stad profile picture" />
+        </div>
+        <div class="section_text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Kiersten Lyde-Stad</h1>
+            <p class="section__text__p2">Computer Science and Statistics Student</p>
+            <div class="btn-container">
+                <button 
+                    class="btn btn-color-2"
+                    onclick="window.open('./assets/resume-example.pdf')"
+                >
+                Download Resume
+            </button>
+            <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+            </button>
+            </div>
+            <div id="socials-container">
+                <img 
+                src="./assets/linkedin.png"
+                alt="My LinkedIn profile"
+                class="icon" 
+                onclick="location.href='https://www.youtube.com/watch?v=ldwlOzRvYOU'" 
+                /> <!-- TODO Replace w/ Proper URL Links -->
+                <img 
+                src="./assets/github.png"
+                alt="My GitHub profile"
+                class="icon" 
+                onclick="location.href='https://www.youtube.com/watch?v=ldwlOzRvYOU'"
+                /> <!-- TODO Replace w/ Proper URL Links -->
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</p>
+            <div class="section-container">
+                <div class="section__pic-container">
+                    <img 
+                    src="./assets/about-pic.png" 
+                    alt="Profile Picture" 
+                    class="about=pic"
+                    />
+                </div>
+                <div class="about-details-container">
+                    <div class="about-containers">
+                        <div class="details-container">
+                            <img 
+                            src="./assets/experience.png" 
+                            alt="Experience icon"
+                            class="icon"
+                            />
+                            <h3>Experience</h3>
+                            <p>2+ years <br /> XX XX</p>
+                        </div>
+                        <div class="details-container">
+                            <img 
+                            src="./assets/education.png" 
+                            alt="Education icon"
+                            class="icon"
+                            />
+                            <h3>Education</h3>
+                            <p>B.Sc.<br />andTHIS</p>
+                        </div>
+                    </div>
+                    <div class="text=container">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Soluta consequuntur nostrum architecto mollitia rem 
+                            animi quae pariatur fuga distinctio harum ex suscipit, 
+                            officiis perferendis veniam necessitatibus ipsum! 
+                            Nulla, 
+                            iure eligendi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img 
+            src="./assets/arrow.png" 
+            alt="Arrow icon" 
+            class="icon arrow" 
+            onclick="location.href='./#experience.'"
+            />
+    </section>
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div clas="about-containers">
+                <div class="details-containers">
+                    <h2 class="experience-sub-title">XX </h2>
+                    <div class="article-container">
+                        <article>
+                            <img 
+                            src="./assets/checkmark.png" 
+                            alt="Experience icon"
+                            class="icon"
+                            />
+                            <div>
+                                <h3>XX</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
