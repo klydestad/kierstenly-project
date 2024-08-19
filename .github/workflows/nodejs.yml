@@ -1,4 +1,4 @@
-name: Node.js CI and Deploy to Cloudflare Workers (Debug)
+name: Minimal Debug Workflow
 
 on:
   push:
@@ -7,73 +7,33 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  debug:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: List repository contents
+    - name: Print debug information
       run: |
+        echo "Debug information:"
+        echo "Current directory: $(pwd)"
         echo "Repository contents:"
-        ls -R
+        ls -la
+        echo "Environment variables:"
+        env
 
-    - name: Display package.json
+    - name: Attempt simple commands
       run: |
-        echo "Contents of package.json:"
-        cat package.json || echo "package.json not found"
+        echo "Running simple commands:"
+        date
+        whoami
+        node --version || echo "Node.js not installed"
 
-    - name: Display wrangler.toml
+    - name: Check for key files
       run: |
-        echo "Contents of wrangler.toml:"
-        cat wrangler.toml || echo "wrangler.toml not found"
+        echo "Checking for key files:"
+        [ -f package.json ] && echo "package.json exists" || echo "package.json not found"
+        [ -f wrangler.toml ] && echo "wrangler.toml exists" || echo "wrangler.toml not found"
+        [ -f .github/workflows/your-workflow-file.yml ] && echo "Workflow file exists" || echo "Workflow file not found"
 
-    - name: Use Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        cache: 'npm'
-
-    - name: Check for package.json
-      id: check_files
-      uses: andstor/file-existence-action@v3
-      with:
-        files: "package.json"
-
-    - name: Install dependencies
-      if: steps.check_files.outputs.files_exists == 'true'
-      run: |
-        echo "Installing dependencies..."
-        npm ci
-        if [ $? -ne 0 ]; then
-          echo "npm ci failed"
-          exit 1
-        fi
-
-    - name: Build
-      if: steps.check_files.outputs.files_exists == 'true'
-      run: |
-        echo "Running build..."
-        npm run build --if-present
-        if [ $? -ne 0 ]; then
-          echo "npm run build failed"
-          exit 1
-        fi
-
-    - name: Test
-      if: steps.check_files.outputs.files_exists == 'true'
-      run: |
-        echo "Running tests..."
-        npm test
-        if [ $? -ne 0 ]; then
-          echo "npm test failed"
-          exit 1
-        fi
-
-    - name: Publish to Cloudflare Workers
-      uses: cloudflare/wrangler-action@v3
-      with:
-        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      env:
-        CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+       
