@@ -1,10 +1,10 @@
 name = "kierstenly-project"
 type = "webpack"
-account_id = "4df2afa5ef1071646d18a40061b37c27"  # Your Cloudflare account ID
+account_id = ""  # Your Cloudflare account ID
 workers_dev = true
 route = "kierstenly.dev/*"
-zone_id = "c32bebbab0d00692a398ba2b7d6c99ac"  # Your zone ID
+zone_id = ""  # Your zone ID
 
 [site]
-bucket = "./public"  # Or your build output directory
+bucket = "."  # Serve files from the root of your repository
 entry-point = "workers-site"
