@@ -1,10 +1,6 @@
 name = "kierstenly-project"
-type = "webpack"
-account_id = "4df2afa5ef1071646d18a40061b37c27"  # Replace with your actual Account ID
-workers_dev = true
-route = "kierstenly.dev/*"
-zone_id = "yc32bebbab0d00692a398ba2b7d6c99ac"  # Replace with your actual Zone ID
+main = "src/index.js"  # Adjust this if your main script is in a different location
+compatibility_date = "2024-08-18"
 
-[site]
-bucket = "."  # Serve files from the root of your repository
-entry-point = "workers-site"
+[vars]
+ENVIRONMENT = "production
