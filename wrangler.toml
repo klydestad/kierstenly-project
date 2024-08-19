@@ -1,0 +1,11 @@
+name = "kierstenly-project"
+type = "javascript"
+account_id = "" # Your Cloudflare Account ID
+workers_dev = true
+route = "kierstenly.dev/*"
+zone_id = "" # Your Cloudflare Zone ID
+
+[build]
+command = "npm run build"
+[build.upload]
+format = "service-worker"
