@@ -1,39 +1,19 @@
-name: Minimal Debug Workflow
+name: Deploy to Cloudflare Workers
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  debug:
+  deploy:
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Print debug information
-      run: |
-        echo "Debug information:"
-        echo "Current directory: $(pwd)"
-        echo "Repository contents:"
-        ls -la
-        echo "Environment variables:"
-        env
-
-    - name: Attempt simple commands
-      run: |
-        echo "Running simple commands:"
-        date
-        whoami
-        node --version || echo "Node.js not installed"
-
-    - name: Check for key files
-      run: |
-        echo "Checking for key files:"
-        [ -f package.json ] && echo "package.json exists" || echo "package.json not found"
-        [ -f wrangler.toml ] && echo "wrangler.toml exists" || echo "wrangler.toml not found"
-        [ -f .github/workflows/your-workflow-file.yml ] && echo "Workflow file exists" || echo "Workflow file not found"
-
-       
+      - uses: actions/checkout@v4
+      - name: Publish
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }
