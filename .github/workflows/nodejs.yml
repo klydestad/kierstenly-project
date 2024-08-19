@@ -1,4 +1,4 @@
-name: Node.js CI and Deploy to Cloudflare Workers
+name: Node.js CI and Deploy to Cloudflare Workers (Debug)
 
 on:
   push:
@@ -10,7 +10,23 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: List repository contents
+      run: |
+        echo "Repository contents:"
+        ls -R
+
+    - name: Display package.json
+      run: |
+        echo "Contents of package.json:"
+        cat package.json || echo "package.json not found"
+
+    - name: Display wrangler.toml
+      run: |
+        echo "Contents of wrangler.toml:"
+        cat wrangler.toml || echo "wrangler.toml not found"
 
     - name: Use Node.js
       uses: actions/setup-node@v4
@@ -27,6 +43,7 @@ jobs:
     - name: Install dependencies
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
+        echo "Installing dependencies..."
         npm ci
         if [ $? -ne 0 ]; then
           echo "npm ci failed"
@@ -36,6 +53,7 @@ jobs:
     - name: Build
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
+        echo "Running build..."
         npm run build --if-present
         if [ $? -ne 0 ]; then
           echo "npm run build failed"
@@ -45,6 +63,7 @@ jobs:
     - name: Test
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
+        echo "Running tests..."
         npm test
         if [ $? -ne 0 ]; then
           echo "npm test failed"
