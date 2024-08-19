@@ -22,7 +22,7 @@
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Kiersten Lyde-Stad</div>
-        <div class="hamburger menu">
+        <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -41,9 +41,9 @@
             <img src="/assets/profile-pic.png" alt="Kiersten Lyde-Stad profile picture" />
         </div>
         <div class="section_text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Kiersten Lyde-Stad</h1>
-            <p class="section__text__p2">Computer Science and Statistics Student</p>
+        <p class="section__text__p2">Hello, I'm</p>
+        <h1 class="title">Kiersten Lyde-Stad</h1>
+        <p class="section__text__p2">Computer Science and Statistics Student</p>
             <div class="btn-container">
                 <button 
                     class="btn btn-color-2"
@@ -66,20 +66,20 @@
                 src="./assets/github.png"
                 alt="My GitHub profile"
                 class="icon" 
-                onclick="location.href='https://www.youtube.com/watch?v=ldwlOzRvYOU'"
+                onclick="location.href='https://github.com/klydestad'"
                 /> <!-- TODO Replace w/ Proper URL Links -->
             </div>
         </div>
     </section>
     <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
+        <p class="section__text__p2">Get To Know More</p>
         <h1 class="title">About Me</p>
             <div class="section-container">
                 <div class="section__pic-container">
                     <img 
                     src="./assets/profile-pic.png" 
                     alt="Profile Picture" 
-                    class="about=pic"
+                    class="about-pic"
                     />
                 </div>
                 <div class="about-details-container">
@@ -90,6 +90,7 @@
                             alt="Experience icon"
                             class="icon"
                             />
+                            <!--
                             <h3>Experience</h3>
                             <p>2+ years <br /> XX XX</p>
                         </div>
@@ -99,12 +100,13 @@
                             alt="Education icon"
                             class="icon"
                             />
+                        -->
                             <h3>Education</h3>
-                            <p>B.Sc.<br />andTHIS</p>
-                        </div>
+                            <p>3rd year B.Sc.</p>
+                            <h5>UBC Combined Major in Computer Science and Statistics</h5>
                     </div>
-                    <div class="text=container">
-                        <p>
+                    <div class="text-container">
+                        <px>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Soluta consequuntur nostrum architecto mollitia rem 
                             animi quae pariatur fuga distinctio harum ex suscipit, 
@@ -123,7 +125,7 @@
             />
     </section>
     <section id="experience">
-        <p class="section__text__p1">Explore My</p>
+        <p class="section__text__p2">Explore My</p>
         <h1 class="title">Experience</h1>
         <div class="experience-details-container">
             <div clas="about-containers">
@@ -201,59 +203,70 @@
             </div>
         </div>
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                        src="./assets/project-1.png"
-                        alt= "Project 1" 
-                        class ="project-img"
-                        />
+    <div class="flexbox">
+        <section id="projects">
+            <p class="section__text__p2">Browse My Recent</p>
+            <h1 class="title">Projects</h1>
+            <div class="experience-details-container">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img 
+                            src="./assets/project-1.png"
+                            alt= "Project 1" 
+                            class ="project-img"
+                            />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Pool Chemistry Diagnostic Tool </h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/klydestad/pool-chem-logbook/tree/main'"
+                        >
+                            GitHub
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://private-user-images.githubusercontent.com/114958037/358881244-d75e6359-52c5-4c20-b4cb-cc3808e3449e.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjM5NTUzNjUsIm5iZiI6MTcyMzk1NTA2NSwicGF0aCI6Ii8xMTQ5NTgwMzcvMzU4ODgxMjQ0LWQ3NWU2MzU5LTUyYzUtNGMyMC1iNGNiLWNjMzgwOGUzNDQ5ZS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgxOFQwNDI0MjVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xZTFkNjM2ZWQ1MmUzYzZhZTFmZWU2NTQxNWZkYzYwOTJiMmI2ODJjNjQ0NTVlMTFjODY3ZTI4MThjMjNhZmQzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.7hbENYwYqEqOHquD-PaxBZVRpoC9GBUgiQvrdm5Be6o'"
+                        >
+                            Live Demo
+                        </button>
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">Project 1</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'"
-                    >
-                        GitHub
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'"
-                    >
-                        Live Demo
-                    </button>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img 
+                            src="./assets/project-2.png"
+                            alt= "Project 1" 
+                            class ="project-img"
+                            />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Heart Disease Symptom Analysis </h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/klydestad/heart-disease-vs-age'"
+                        >
+                            GitHub
+                        </button>
 
-
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img 
+                            src="./assets/project-3.png"
+                            alt= "Project 1" 
+                            class ="project-img"
+                            />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Vehicle Theft Rates Analysis </h2>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/klydestad/vehicle-theft-rates'"
+                        >
+                            GitHub
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                        src="./assets/project-1.png"
-                        alt= "Project 1" 
-                        class ="project-img"
-                        />
-                </div>
-                <h2 class="experience-sub-title project-title">Project 1</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'"
-                    >
-                        GitHub
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'"
-                    >
-                        Live Demo
-                    </button>
-
-
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     </section>
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
+      <p class="section__text__p2">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
@@ -262,7 +275,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:kikilydestad@outlook.com">kikilydestad@outlook.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -270,10 +283,11 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/kiersten-lyde-stad-a736a9284/">LinkedIn</a></p>
         </div>
       </div>
     </section>
+    
     <footer>
         <nav>
           <div class="nav-links-container">
