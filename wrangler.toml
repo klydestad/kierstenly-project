@@ -1,6 +1,0 @@
-name = "kierstenly-project"
-main = "src/index.js"  # Adjust this if your main script is in a different location
-compatibility_date = "2024-08-18"
-
-[vars]
-ENVIRONMENT = "production
