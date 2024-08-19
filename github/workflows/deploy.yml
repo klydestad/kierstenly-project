@@ -1,33 +1,39 @@
-name: Deploy to Cloudflare Workers
+name: Node.js CI and Deploy to Cloudflare Workers
 
 on:
   push:
-    branches:
-      - main  # or your default branch name
+    branches: [ "main" ]
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    name: Deploy
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'  # or your preferred Node.js version
-
-      - name: Install dependencies
-        run: npm ci  # or yarn install --frozen-lockfile if you use yarn
-
-      - name: Build project
-        run: npm run build  # replace with your build command if different
-
-      - name: Publish to Cloudflare Workers
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        env:
-          CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
-
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+    
+    - name: Check for package.json
+      id: check_files
+      uses: andstor/file-existence-action@v2
+      with:
+        files: "package.json"
+    
+    - name: Install dependencies
+      if: steps.check_files.outputs.files_exists == 'true'
+      run: npm ci
+    
+    - name: Build
+      if: steps.check_files.outputs.files_exists == 'true'
+      run: npm run build --if-present
+    
+    - name: Publish to Cloudflare Workers
+      uses: cloudflare/wrangler-action@2.0.0
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      env:
+        CF_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
