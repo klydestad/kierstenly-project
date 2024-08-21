@@ -21,8 +21,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-     /* TODO: REMOVE */
-    background-color: WHITE;
+    background-color: var(--bg);
 }
 
 html {
