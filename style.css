@@ -21,7 +21,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg);
+    background-color: red;
 }
 
 html {
