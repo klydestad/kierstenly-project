@@ -5,12 +5,22 @@ Portfolio website
 TODO:
 - copilot free app (wait for email)
 
-- Add more projects
+- Fix project box formatting
+
+- Add WEX
 
 - Add finalized resume, refactor
     - update w/ feedback from Linsday
 
-- Add proper Readme.md explanations
+- GITHUB: Add proper Readme.md explanations
+
+- Add resume page
+
+- Update skills section 
+
+- Fun features
+
+
 
 
 

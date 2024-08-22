@@ -193,6 +193,8 @@ a:hover {
 }
 
 
+
+
 /* PROFILE SECTION */
 
 #profile {
@@ -281,9 +283,11 @@ a:hover {
     gap: 1rem;
 }
 
+
+
 /* ABOUT SECTION */
 
-/* ADDED*/
+
 #about .section__text p,
 #about .title,
 #about .section__text__p2 {
@@ -393,6 +397,10 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
+
+
+
+
 
 /* EXPERIENCE SECTION */
 
