@@ -7,8 +7,6 @@ TODO:
 
 - Fix project box formatting
 
-- style.css reformatting
-
 - Add WEX
 
 - Add finalized resume, refactor
