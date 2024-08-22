@@ -7,6 +7,8 @@ TODO:
 
 - Fix project box formatting
 
+- style.css reformatting
+
 - Add WEX
 
 - Add finalized resume, refactor
@@ -15,8 +17,6 @@ TODO:
 - GITHUB: Add proper Readme.md explanations
 
 - Add resume page
-
-- Update skills section 
 
 - Fun features
 

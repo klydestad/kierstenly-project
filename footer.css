@@ -1,0 +1,25 @@
+/* FOOTER SECTION */ 
+
+footer {
+    height: 26vh;
+    width: 100%;
+    margin: 0 1rem;
+
+  }
+  
+  footer p {
+    text-align: center;
+  }
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: right;
+  }
+
+

@@ -1,0 +1,41 @@
+/* PROJECTS SECTION */
+
+#projects{
+    position: relative;
+
+  }
+
+  .color-container {
+    border-color: var(--border);
+    background: rgb(250, 250, 250);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure the container takes full height */
+  }
+  
+  .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: var(--text);
+  }
+  
+  .project-btn {
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .btn-container {
+    margin-top: auto; /* Push buttons to the bottom */
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between buttons */
+    padding: 1rem;
+  }
+  
+
