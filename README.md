@@ -1,6 +1,10 @@
 Purpose:
 Portfolio website
 
+
+TODO:
+- Fix cursor centering
+
 Audience: 
 Employers
 
