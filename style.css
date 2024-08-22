@@ -42,32 +42,30 @@ a,
 }
 
 
-/* Apply custom cursor to the body */
+
+
+
+
+/* Custom cursor for the entire page */
 body {
-    cursor: url('assets/custom-cursor.png') 32 32, auto;
+    cursor: url('assets/custom-cursor.png') 16 16, auto;
 }
 
-/* Apply to links and interactive elements */
+/* Custom cursor for interactive elements */
 a, button, input[type="submit"], input[type="button"], .clickable {
-    cursor: url('assets/custom-cursor.png') 32 32, pointer;
+    cursor: url('assets/custom-cursor.png') 16 16, pointer;
 }
 
-/* Optional: different cursor for hover states */
+/* Ensure text cursor for text inputs */
+input[type="text"], textarea, [contenteditable] {
+    cursor: text;
+}
+
+/* Optional: Different cursor for hover states if needed */
 a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover, .clickable:hover {
-    cursor: url('assets/custom-cursor.png') 32 32, pointer;
+    cursor: url('assets/custom-cursor.png') 16 16, pointer;
 }
 
-
-/* Apply custom cursor to everything */
-html, body, * {
-    cursor: url('assets/custom-cursor.png') 32 32, auto !important;
-}
-
-/* Specific rules for interactive elements */
-a, button, input[type="submit"], input[type="button"], .clickable,
-a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover, .clickable:hover {
-    cursor: url('assets/custom-cursor.png') 32 32, pointer !important;
-}
 
 /* DESKTOP NAV */
 

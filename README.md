@@ -4,29 +4,13 @@ Portfolio website
 
 TODO:
 - Fix cursor centering
+- copilot free app
+- hamburger menu not working?
 
 Audience: 
-Employers
-
-Sections:
-About
-- home page with name, resume, links to linkedin/git
-Experience
-- Photo containers of various projects (linked to git) with short descriptions, 
-- tags, 
-- add filters for tagged skills
-- Same w/ classes
-Contact
-- email
-Resume
-- online formatted resume, 
-again with a download resume link (Kiersten Lyde-Stad.pdf)
 
 Extras
 - use javascript to create cool animations/functions
-- custom cursor icon
-- personalize website
-
 
 
 
