@@ -3,14 +3,13 @@ Portfolio website
 
 
 TODO:
-- Fix cursor centering
-- copilot free app
-- hamburger menu not working?
+- copilot free app (wait for email)
 
-Audience: 
+- Add more projects
+- Add updated resume
+- Add WEX
 
-Extras
-- use javascript to create cool animations/functions
+
 
 
 
