@@ -6,13 +6,10 @@ TODO:
 
 WEBSITE
 
-Info-
-- Add volunteer, divide experience into WEX vs VOL
 
 Styling-
 - Add resume page
 - Fun features
-- test commit
 
 
 
