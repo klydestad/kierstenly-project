@@ -24,6 +24,10 @@ GENERAL
     - then adjust site accordingly
 
 
+RESUME: 
+- Condense, add more to projects
+- Make GitHub Repo for Resume
+
 
 
 
