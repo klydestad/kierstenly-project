@@ -3,20 +3,22 @@ Portfolio website
 
 
 TODO:
-- copilot free app (wait for email)
 
-- Fix project box formatting
-
-- Add WEX
-
-- Add finalized resume, refactor
-    - update w/ feedback from Linsday
-
-- GITHUB: Add proper Readme.md explanations
-
+WEBSITE
 - Add resume page
-
 - Fun features
+- Add volunteer, divide experience into WEX vs VOL
+
+
+GITHUB
+- standardize proper Readme.md explanations
+
+
+GENERAL
+- explore presentation of co-op work on site
+- copilot free app (wait for email)
+- resume feedback then adjust
+    - then adjust site accordingly
 
 
 
