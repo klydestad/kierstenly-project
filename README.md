@@ -5,7 +5,6 @@ Portfolio website
 TODO:
 
 WEBSITE
-- Add temp project
 
 
 Future Styling-
@@ -16,8 +15,7 @@ Future Styling-
 
 
 GITHUB
-- add temp project
-- standardize proper Readme.md explanations
+- standardize proper Readme.md explanations for all projects
 
 
 GENERAL
