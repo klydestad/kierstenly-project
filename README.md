@@ -5,9 +5,14 @@ Portfolio website
 TODO:
 
 WEBSITE
+
+Info-
+- Add volunteer, divide experience into WEX vs VOL
+
+Styling-
 - Add resume page
 - Fun features
-- Add volunteer, divide experience into WEX vs VOL
+
 
 
 GITHUB

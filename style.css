@@ -1,0 +1,14 @@
+/* Import section-specific styles */
+@import 'general.css';
+@import 'nav.css';
+@import 'profile.css';
+@import 'about.css';
+@import 'skills.css';
+@import 'experience.css';
+@import 'projects.css';
+@import 'contact.css';
+@import 'footer.css';
+
+/* Any additional styles that don't fit into a specific section can remain here */
+
+
