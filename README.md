@@ -12,6 +12,7 @@ Info-
 Styling-
 - Add resume page
 - Fun features
+- test commit
 
 
 
