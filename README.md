@@ -5,15 +5,18 @@ Portfolio website
 TODO:
 
 WEBSITE
+- Add temp project
 
 
-Styling-
+Future Styling-
 - Add resume page
 - Fun features
+- REACT
 
 
 
 GITHUB
+- add temp project
 - standardize proper Readme.md explanations
 
 
