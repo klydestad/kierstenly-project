@@ -4,22 +4,42 @@ footer {
     height: 26vh;
     width: 100%;
     margin: 0 1rem;
+    padding: 1rem 0;
+    background-color: #f8f8f8; /* Add a background color for visibility */
+}
 
-  }
-  
-  footer p {
+footer p {
     text-align: center;
-  }
+    margin-top: 1rem;
+}
 
-  .flexbox {
+footer .nav-links-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+footer .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+}
+
+footer .nav-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.flexbox {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-  }
+}
 
-  img {
+img {
     object-fit: cover;
     object-position: right;
-  }
+}
 
 
