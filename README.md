@@ -5,6 +5,9 @@ Portfolio website
 TODO:
 
 WEBSITE
+- update work
+- add master copy resume
+- add skills to projects (make neat)
 
 
 Future Styling-
