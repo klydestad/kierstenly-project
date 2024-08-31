@@ -7,15 +7,13 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styling/mediaqueries.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <nav id="desktop-nav">
         <div class="logo">Kiersten Lyde-Stad
         </div>
             <ul class="nav-links">
-                <!--
-                <li><a href="#about">About</a></li>
-                -->
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -32,9 +30,6 @@
                 <span></span>
             </div>
             <ul class="menu-links">
-                <!--
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                -->
                 <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -54,11 +49,11 @@
         <p class="section__text__p2">UBC</p>
             <div class="btn-container">
                 <button 
-                    class="btn btn-color-2"
-                    onclick="window.open('./assets/Kiersten_Lyde-Stad_Resume_42381061.pdf')"
+                class="btn btn-color-2"
+                onclick="window.open('https://github.com/klydestad/resume/raw/main/Kiersten_Lyde-Stad_Resume_42381061.docx', '_blank')"
                 >
                 Download Resume
-            </button>
+                </button>
             <button class="btn btn-color-1" onclick="location.href='./#contact'">
                 Contact Info
             </button>
@@ -79,57 +74,7 @@
             </div>
         </div>
     </section>
-    <!--
-    <section id="about">
-        <p class="section__text__p2">Get To Know More</p>
-        <h1 class="title">About Me</p>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img 
-                    src="./assets/profile-pic.png" 
-                    alt="Profile Picture" 
-                    class="about-pic"
-                    />
-                </div>
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img 
-                            src="./assets/experience.png" 
-                            alt="Experience icon"
-                            class="icon"
-                            />
-                            <h3>Experience</h3>
-                            <p>2+ years <br /> XX XX</p>
-                        </div>
-                        <div class="details-container">
-                            <img 
-                            src="./assets/education.png" 
-                            alt="Education icon"
-                            class="icon"
-                            />
-                        -->
-                            <!--
-                            <h3>Education</h3>
-                            <p>3rd year B.Sc.</p>
-                            <h5>UBC Combined Major in Computer Science and Statistics</h5>
-                    </div>
-                    -->
-                    <!--
-                    <div class="text-container">
-                        <px>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Soluta consequuntur nostrum architecto mollitia rem 
-                            animi quae pariatur fuga distinctio harum ex suscipit, 
-                            officiis perferendis veniam necessitatibus ipsum! 
-                            Nulla, 
-                            iure eligendi.
-                        </p>
-                    </div>
-                -->
-                </div>
-            </div>
-            <img 
+    <img 
             src="./assets/arrow.png" 
             alt="Arrow icon" 
             class="icon arrow" 
@@ -153,6 +98,7 @@
                     <div class="skill-item">SQL</div>
                     <div class="skill-item">JavaScript</div>
                     <div class="skill-item">Racket BSL</div>
+                    <div class="skill-item">LaTeX</div>
                 </div>
             </div>
             <div class="skill-category">
@@ -180,6 +126,7 @@
                     <div class="skill-item">VS Code</div>
                     <div class="skill-item">IntelliJ IDEA</div>
                     <div class="skill-item">SQL Workbench</div>
+                    <div class="skill-item">Overleaf</div>
                 </div>
             </div>
         </div>
@@ -228,7 +175,7 @@
                 <h2 class="experience-sub-title">Science One Mentor</h2>
                 <p class="experience-date">UBC | Sep 2022 – Present </p>
                 <ul class="experience-list">
-                    <li class="experience-item">Providing guidance to first-year students in UBC’s accelerated Science One program</li>
+                    <li class="experience-item">Providing guidance to first-year students in UBC's accelerated Science One program</li>
                 </ul>
             </div>
             <div class="details-container">
