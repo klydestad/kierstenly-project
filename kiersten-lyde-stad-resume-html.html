@@ -21,16 +21,17 @@
             width: 8.5in;
             height: 11in;
             display: grid;
-            grid-template-rows: 1in auto 1in;
-            grid-template-columns: 1in [content-start] 6.5in [content-end] 1in;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: [content-start] 7.5in [content-end];
             page-break-after: always;
+            padding: 0.5in 0.5in 0.5in 0.5in;
+            box-sizing: border-box;
         }
         .header {
             grid-column: content-start / content-end;
             grid-row: 1;
             text-align: right;
-            align-self: end;
-            padding-bottom: 0in;
+            padding: 0 0 0.25in;
         }
         .header img {
             opacity: 0.5;
@@ -41,13 +42,13 @@
             grid-column: content-start / content-end;
             grid-row: 2;
             overflow: hidden;
+            padding: 0;
         }
         .footer {
             grid-column: content-start / content-end;
             grid-row: 3;
             text-align: center;
-            align-self: end;
-            padding-bottom: 0.25in;
+            padding: 0.25in 0 0;
         }
         .page:first-of-type .footer {
             display: none;
@@ -72,7 +73,6 @@
             width: 100%;
             margin: auto;
             overflow: hidden;
-            padding: 0 20px;
         }
         .section {
             margin-bottom: 20px;
@@ -171,7 +171,7 @@
                         <span>Dec 2022</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Designed and validated a multiple linear regression model to explore relationships between heart disease symptoms and age</li>
+                        <li>Designed and valihttp://127.0.0.1:3000/kiersten-lyde-stad-resume-html.htmld a multiple linear regression model to explore relationships between heart disease symptoms and age</li>
                         <li>Managed a group project using GitHub for version control and collaboration</li>
                     </ul>
 
