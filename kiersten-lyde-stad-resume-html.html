@@ -24,7 +24,7 @@
             grid-template-rows: auto 1fr auto;
             grid-template-columns: [content-start] 6.5in [content-end]; /* Adjusted for 1-inch margins */
             page-break-after: always;
-            padding: 0.25in 1in 1in 1in; /* Reduced top padding to 0.25 inch */
+            padding: 0.25in 1in 0.5in 1in; /* Reduced top padding to 0.25 inch */
             box-sizing: border-box;
             overflow: hidden; /* Hide overflow */
         }
@@ -33,10 +33,10 @@
             grid-row: 1;
             text-align: right;
             padding: 0;
-            margin-bottom: 0.25in; /* Reduced margin to 0.25 inch */
+            margin-bottom: -0.67in; 
             position: relative; /* For positioning the image */
             height: 1.5in; /* Set a fixed height for the header */
-            overflow: visible; /* Allow the image to overflow */
+            overflow: visible; 
         }
         .header img {
             opacity: 0.5;
@@ -53,6 +53,7 @@
             overflow: hidden;
             padding: 0;
             position: relative;
+            padding-bottom: 0.25in;
         }
         .content > .container:first-child {
             margin-top: 0;
@@ -63,8 +64,7 @@
         .footer {
             grid-column: content-start / content-end;
             grid-row: 3;
-            text-align: center;
-            padding: 0.25in 0 0;
+            text-align: center;   
         }
         .page:first-of-type .footer {
             display: none;
