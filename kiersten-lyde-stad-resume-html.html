@@ -26,6 +26,7 @@
             page-break-after: always;
             padding: 0.25in 1in 1in 1in; /* Reduced top padding to 0.25 inch */
             box-sizing: border-box;
+            overflow: hidden; /* Hide overflow */
         }
         .header {
             grid-column: content-start / content-end;
@@ -33,17 +34,25 @@
             text-align: right;
             padding: 0;
             margin-bottom: 0.25in; /* Reduced margin to 0.25 inch */
+            position: relative; /* For positioning the image */
+            height: 1.5in; /* Set a fixed height for the header */
+            overflow: visible; /* Allow the image to overflow */
         }
         .header img {
             opacity: 0.5;
-            max-width: 66%;
             height: auto;
+            position: absolute;
+            right: -0.75in; /* Position 0.5 inches from the right edge of the content area */
+            top: 0;
+            width: 80%; /* Set width to 66% of the content area */
+            max-height: 100%; /* Ensure image doesn't exceed header height */
         }
         .content {
             grid-column: content-start / content-end;
             grid-row: 2;
             overflow: hidden;
             padding: 0;
+            position: relative;
         }
         .content > .container:first-child {
             margin-top: 0;
