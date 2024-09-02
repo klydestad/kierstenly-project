@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiersten Lyde-Stad - Resume</title>
     <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 1in;
+        }
         body {
             font-family: 'Calibri Body', sans-serif;
             font-size: 12px;
@@ -12,6 +16,34 @@
             margin: 0;
             padding: 0;
             color: #333;
+        }
+        .page {
+            width: 6.5in;
+            height: 9in;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .header {
+            position: running(header);
+            text-align: right;
+        }
+        .footer {
+            position: running(footer);
+            text-align: center;
+        }
+        @page {
+            @top-right {
+                content: element(header);
+            }
+            @bottom-center {
+                content: element(footer);
+            }
+        }
+        @page :first {
+            @bottom-center {
+                content: none;
+            }
         }
         h1 {
             font-family: 'Calibri Body', sans-serif;
@@ -27,14 +59,6 @@
             color: #002145; /* UBC blue */
             margin-bottom: 5px;
         }
-        .header {
-            width: 100%;
-            text-align: center;
-            padding: 0;
-            background-color: white;
-            margin-bottom: 0px;
-        }
-        
         .header img {
             opacity: 0.5;
             max-width: 100%;
@@ -53,39 +77,6 @@
         ul {
             padding-left: 20px;
         }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 8.5in;
-        }
-        @media print {
-            .footer {
-                display: none;
-            }
-            @page {
-                margin: 0;
-                size: 8.5in 11in;
-            }
-            @page :first {
-                margin-bottom: 0;
-            }
-            body::after {
-                content: '';
-                display: block;
-                height: 0;
-                page-break-after: always;
-            }
-            .footer-content {
-                position: running(footer);
-            }
-            @page :not(:first) {
-                @bottom-center {
-                    content: element(footer);
-                }
-            }
-        }
         /* Add this CSS to center text and adjust margins */
         .center-text {
             text-align: center;
@@ -99,10 +90,11 @@
     </style>
 </head>
 <body>
-    <div style="width: 8.5in; padding: 1in; margin: auto; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-        <header class="header" style="text-align: right; padding-top: 0;">
-            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header" style="max-width: 66%; height: auto; margin-right: -0.5in;">
-        </header>
+    <div class="page">
+        <div class="header">
+            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header" style="max-width: 66%; height: auto;">
+        </div>
+        
         <div class="container center-text">
             <p style="margin-top: 0; margin-bottom: 0; font-size: 22px;">Kiersten Lyde-Stad</p>
             <p style="margin-top: 0; margin-bottom: 0;">3<sup>rd</sup> Year Combined Major in Computer Science and Statistics</p>
@@ -137,7 +129,7 @@
                     <p style="margin: 0;"><strong>Indigenous Business Directory</strong> | SQL, Data Analysis</p>
                     <span>Jan - Aug 2024</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Development, optimization, and maintenance of Excel business directory</li>
                     <li>Migration of directory to SQL, enhancing data security and scalability</li>
                     <li>Streamlined supplier information gathering process via Qualtrics surveys</li>
@@ -147,7 +139,7 @@
                     <p style="margin: 0;"><strong>Pool Chemistry Logbook</strong> | Java, JUnit, JSON, UI Design</p>
                     <span>Dec 2023</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Developed a Java-based digital tool for managing pool chemistry, featuring data logging, analysis, and alerting functionalities via exception throwing</li>
                     <li>Implemented data persistence using JSON for saving and loading logbooks</li>
                     <li>Designed an intuitive UI for monitoring current and historical readings</li>
@@ -157,7 +149,7 @@
                     <p style="margin: 0;"><strong>Pool Chemistry Diagnostic Tool</strong> | Python, Jupyter, GitHub </p>
                     <span>Jun 2023</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Analyzed pool chlorine data via constructing functions to indicate whether a level is in range, its difference from the ideal range, and the quantity of chemicals required to correct it</li>
                     <li>Proposing program to local pool as a replacement for manual recording and calculations</li>
                 </ul>
@@ -166,7 +158,7 @@
                     <p style="margin: 0;"><strong>Vehicle Theft Rates Analysis</strong> | R, Statistical Inference, Jupyter</p>
                     <span>Apr 2023</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Performed statistical analysis on vehicle theft data using R, including two-sample z-tests and bootstrap confidence intervals</li>
                     <li>Constructed a final analysis based on hypothesis testing results</li>
                 </ul>
@@ -175,7 +167,7 @@
                     <p style="margin: 0;"><strong>Heart Disease Symptom Analysis</strong> | R, Data Science, Jupyter, GitHub</p>
                     <span>Dec 2022</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Designed and validated a multiple linear regression model to explore relationships between heart disease symptoms and age</li>
                     <li>Managed a group project using GitHub for version control and collaboration</li>
                 </ul>
@@ -184,7 +176,7 @@
                     <p style="margin: 0;"><strong>Resonant Frequency vs. Temperature Analysis</strong> | Data Science, Excel</p>
                     <span>Jan - Mar 2022</span>
                 </div>
-                <ul style="padding-left: 40px; text-align: left;">
+                <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                     <li>Explored the relationship between increased temperature and frequency of a trumpet</li>
                     <li>Analyzed frequency spectrum data with Excel and found statistically significant results</li>
                 </ul>
@@ -277,21 +269,9 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="footer-content">
-                <p>Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
-            </div>
-        </footer>
+        <div class="footer">
+            <p>Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
+        </div>
     </div>
-
-    <script>
-        // Script to add page numbers
-        window.onload = function() {
-            var pages = document.getElementsByClassName('page-number');
-            for (var i = 0; i < pages.length; i++) {
-                pages[i].textContent = i + 1;
-            }
-        }
-    </script>
 </body>
 </html>
