@@ -50,7 +50,7 @@
             <div class="btn-container">
                 <button 
                 class="btn btn-color-2"
-                onclick="window.open('https://github.com/klydestad/resume/raw/main/Kiersten_Lyde-Stad_Resume_42381061.docx', '_blank')"
+                onclick="generatePDF()"
                 >
                 Download Resume
                 </button>
@@ -358,5 +358,31 @@
         <p>Copyright &#169; 2024 Kiersten Lyde-Stad. All Rights Reserved.</p>
       </footer>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+            // Get the resume.html content
+            fetch('resume.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Create a new div element
+                    const element = document.createElement('div');
+                    // Set its HTML content
+                    element.innerHTML = html;
+
+                    // Configure the PDF options
+                    const opt = {
+                        margin: 10,
+                        filename: 'Kiersten_Lyde-Stad_Resume.pdf',
+                        image: { type: 'jpeg', quality: 0.98 },
+                        html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                    };
+
+                    // Generate and download the PDF
+                    html2pdf().set(opt).from(element).save();
+                });
+        }
+    </script>
 </body>
 </html>
