@@ -22,9 +22,9 @@
             height: 11in;
             display: grid;
             grid-template-rows: auto 1fr auto;
-            grid-template-columns: [content-start] 7.5in [content-end];
+            grid-template-columns: [content-start] 6.5in [content-end]; /* Adjusted for 1-inch margins */
             page-break-after: always;
-            padding: 0.5in 0.5in 0.5in 0.5in;
+            padding: 0.25in 1in 1in 1in; /* Reduced top padding to 0.25 inch */
             box-sizing: border-box;
         }
         .header {
@@ -32,6 +32,7 @@
             grid-row: 1;
             text-align: right;
             padding: 0;
+            margin-bottom: 0.25in; /* Reduced margin to 0.25 inch */
         }
         .header img {
             opacity: 0.5;
