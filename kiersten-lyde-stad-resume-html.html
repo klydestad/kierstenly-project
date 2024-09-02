@@ -31,7 +31,7 @@
             grid-column: content-start / content-end;
             grid-row: 1;
             text-align: right;
-            padding: 0 0 0.25in;
+            padding: 0;
         }
         .header img {
             opacity: 0.5;
@@ -43,6 +43,12 @@
             grid-row: 2;
             overflow: hidden;
             padding: 0;
+        }
+        .content > .container:first-child {
+            margin-top: 0;
+        }
+        .content > .container:first-child > p:first-child {
+            margin-top: 5px;
         }
         .footer {
             grid-column: content-start / content-end;
@@ -349,7 +355,7 @@
                         <p style="margin: 0;"><strong>3<sup>rd</sup> Year Bachelor of Science, Computer Science and Statistics</strong></p>
                         <span>Expected graduation May 2026</span>
                     </div>
-                    <p style="text-align: left; margin-top: 1px;">University of British Columbia, Vancouver, BC</p>
+                    <p style="text-align: left;">University of British Columbia, Vancouver, BC</p>
                 </div>
 
                 <div class="section">
