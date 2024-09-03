@@ -5,9 +5,8 @@ Portfolio website
 TODO:
 
 WEBSITE
-- update work
-- add master copy resume
 - add skills to projects (make neat)
+- update www
 
 
 Future Styling-
@@ -22,7 +21,6 @@ GITHUB
 
 
 GENERAL
-- explore presentation of co-op work on site
 - copilot free app (wait for email)
 - resume feedback then adjust
     - then adjust site accordingly
@@ -30,7 +28,7 @@ GENERAL
 
 RESUME: 
 - Condense, add more to projects
-- Make GitHub Repo for Resume
+
 
 
 
