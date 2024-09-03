@@ -6,8 +6,8 @@ TODO:
 
 WEBSITE
 - add skills to projects (make neat)
-- fix resume printing
-- fix resume centering
+- fix resume printing - serverside or converter
+- fix resume centering on website without modifying original resume.html
 - update www
 
 
