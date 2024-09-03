@@ -118,8 +118,39 @@
         }
 
     </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styling/mediaqueries.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
+    <nav id="desktop-nav">
+        <div class="logo">Kiersten Lyde-Stad</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Kiersten Lyde-Stad</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="index.html#skills" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="page">
         <div class="header">
             <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header">
@@ -356,5 +387,22 @@
             <p style="color: #002145;">Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
         </div>
     </div>
+
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#skills">Skills</a></li>
+              <li><a href="index.html#experience">Experience</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2024 Kiersten Lyde-Stad. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

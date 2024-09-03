@@ -6,6 +6,7 @@ TODO:
 
 WEBSITE
 - add skills to projects (make neat)
+- fix resume printing
 - update www
 
 
@@ -24,11 +25,6 @@ GENERAL
 - copilot free app (wait for email)
 - resume feedback then adjust
     - then adjust site accordingly
-
-
-RESUME: 
-- Condense, add more to projects
-
 
 
 
