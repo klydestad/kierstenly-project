@@ -7,6 +7,7 @@ TODO:
 WEBSITE
 - add skills to projects (make neat)
 - fix resume printing
+- fix resume centering
 - update www
 
 
