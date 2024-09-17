@@ -1,5 +1,5 @@
 Purpose:
-Portfolio website
+Portfolio website & Resume Version Control
 
 
 TODO:
@@ -8,7 +8,8 @@ WEBSITE
 - add skills to projects (make neat)
 - fix resume printing - serverside or converter
 - fix resume centering on website without modifying original resume.html
-- update www
+- update www link for aesthetic purposes
+- One-point-of-change refactoring where applicable
 
 
 Future Styling-
@@ -24,8 +25,15 @@ GITHUB
 
 GENERAL
 - copilot free app (wait for email)
-- resume feedback then adjust
+- resume feedback from co-op coordinator
     - then adjust site accordingly
+
+
+
+
+
+
+
 
 
 
