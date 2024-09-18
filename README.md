@@ -5,11 +5,12 @@ Portfolio website & Resume Version Control
 TODO:
 
 WEBSITE
-- add skills to projects (make neat)
+- add skills to projects (React?)
 - fix resume printing - serverside or converter
 - fix resume centering on website without modifying original resume.html
 - update www link for aesthetic purposes
 - One-point-of-change refactoring where applicable
+
 
 
 Future Styling-
