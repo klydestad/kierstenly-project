@@ -5,6 +5,10 @@ Portfolio website & Resume Version Control
 TODO:
 
 WEBSITE
+
+- add linked in
+
+
 - add skills to projects (React?)
 - fix resume printing - serverside or converter
 - fix resume centering on website without modifying original resume.html
