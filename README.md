@@ -1,4 +1,3 @@
-Purpose:
 # Portfolio Website
 ## Project Overview
 A personal portfolio website designed to showcase my technical projects and skills. It provides:
