@@ -1,58 +1,26 @@
-Purpose:
-Portfolio website & Resume Version Control
+# Portfolio Website
+## Project Overview
+A personal portfolio website designed to showcase my technical projects and skills. It provides:
+* A responsive interface that adapts to different screen sizes
+* Project showcase with detailed descriptions and links
+* Skills and experience sections
+* Professional contact information and social links
 
+## Motivation
+As a computer science student, having a professional online presence is crucial. This website serves as a central hub for potential employers and collaborators to view my work and experience.
 
-TODO:
+## Features
+* Responsive design that works on mobile and desktop
+* Project gallery with detailed descriptions
+* Skills section with proficiency indicators
+* Contact form for professional inquiries
+* Dark/light mode toggle
+* Smooth scrolling navigation
 
-WEBSITE
-
-- add linked in
-
-
-- add skills to projects (React?)
-- fix resume printing - serverside or converter
-- fix resume centering on website without modifying original resume.html
-- update www link for aesthetic purposes
-- One-point-of-change refactoring where applicable
-
-
-
-Future Styling-
-- Add resume page
-- Fun features
-- REACT
-
-
-
-GITHUB
-- standardize proper Readme.md explanations for all projects
-
-
-GENERAL
-- copilot free app (wait for email)
-- resume feedback from co-op coordinator
-    - then adjust site accordingly
-
-
-
-
-
-
-
-
-
-
-
-
-Ideas of more personal projects:
-
-Algorithms & Complex Data Structures (INSIDE of a more flashy project)
-
-AI/In Demand
-
-Real-world Applications** Idea: e.g. in an interview lead an employer to a question and say hey look I solved it 
---> eg business website for someone
-
+## Technical Details
+* Languages: HTML, CSS, JavaScript
+* Environment: VS Code
+* Key concepts: Responsive design, CSS Grid/Flexbox, JavaScript
 
 
 
