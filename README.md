@@ -20,7 +20,7 @@ As a computer science student, having a professional online presence is crucial.
 ## Technical Details
 * Languages: HTML, CSS, JavaScript
 * Environment: VS Code
-* Key concepts: Responsive design, CSS Grid/Flexbox, vanilla JavaScript
+* Key concepts: Responsive design, CSS Grid/Flexbox, JavaScript
 
 
 
