@@ -34,3 +34,17 @@ function generatePDF() {
         console.error('Error generating PDF:', error);
       });
   }
+
+// Add this function to update the timestamp
+function updateLastModified() {
+    const timestampElement = document.getElementById('timestamp');
+    const buildTime = timestampElement.textContent || new Date().toUTCString();
+    
+    // If no build time is injected, use current time
+    if (buildTime === '__BUILD_TIME__') {
+        timestampElement.textContent = new Date().toUTCString();
+    }
+}
+
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', updateLastModified);

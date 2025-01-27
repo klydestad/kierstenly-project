@@ -1,0 +1,20 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Update build timestamp and hash
+        run: |
+          BUILD_TIME=$(date -u +'%Y-%m-%d %H:%M:%S UTC')
+          COMMIT_HASH=$(git rev-parse --short HEAD)
+          sed -i "s/__BUILD_TIME__/$BUILD_TIME/" index.html
+          sed -i "s/__COMMIT_HASH__/$COMMIT_HASH/" index.html
+      
+      # ... rest of your deployment steps ... 
