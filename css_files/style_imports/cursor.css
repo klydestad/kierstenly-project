@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     /* TODO: CHANGE */
     background-color: var(--bg);
-    cursor: url('assets/custom-cursor.png'), auto;
+    cursor: url('./assets/custom-cursor.png') 16 100, auto;
 }
 
 html {
@@ -44,13 +44,9 @@ a,
 
 
 
-body, html, * {
-    cursor: url('assets/custom-cursor.png') 16 100, auto !important;
-}
-
 a, button, input[type="submit"], input[type="button"], .clickable,
 a:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover, .clickable:hover {
-    cursor: url('assets/custom-cursor.png') 16 , pointer !important;
+    cursor: url('../../assets/custom-cursor.png') 16 100, pointer !important;
 }
 
 /* Ensure text cursor for inputs */

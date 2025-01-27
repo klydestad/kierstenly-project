@@ -8,7 +8,19 @@
 @import './style_imports/projects.css';
 @import './style_imports/contact.css';
 @import './style_imports/footer.css';
+@import './style_imports/custom-cursor.css';
 
 /* Any additional styles that don't fit into a specific section can remain here */
+
+.last-updated {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
 
 
