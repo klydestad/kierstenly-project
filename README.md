@@ -21,3 +21,5 @@ As a computer science student, having a professional online presence is crucial.
 * Languages: HTML, CSS, JavaScript
 * Environment: VS Code
 * Key concepts: Responsive design, CSS Grid/Flexbox, JavaScript
+
+TODO: job app summary sheet, double check all docs
