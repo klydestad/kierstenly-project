@@ -113,9 +113,11 @@
             text-decoration: underline;
         }
 
-        ul li:last-child {
+        /* Add this new style for the tech line */
+        .tech-line {
             list-style-type: none;
         }
+        
 
     </style>
 </head>
@@ -138,18 +140,20 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div style="display: flex; width: 100%; position: relative;">
                         <div style="flex: 0 0 30%; display: flex; flex-direction: column; text-align: left;">
-                            <p style="margin: 0;"><strong>Languages:</strong></p>
-                            <p style="margin: 0;"><strong>Libraries:</strong></p>
-                            <p style="margin: 0;"><strong>Tools/Frameworks:</strong></p>
-                            <p style="margin: 0;"><strong>Web:</strong></p>
+                            <p style="margin: 0;"><strong>Programming Languages:</strong></p>
+                            <p style="margin: 0;"><strong>Data Science & ML:</strong></p>
+                            <p style="margin: 0;"><strong>Web Development:</strong></p>
+                            <p style="margin: 0;"><strong>Tools & Platforms:</strong></p>
+                            <p style="margin: 0;"><strong>Testing & Frameworks:</strong></p>
                             <p style="margin: 0;"><strong>Environments:</strong></p>
                         </div>
                         <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: left;">
-                            <p style="margin: 0;">Java, Python, C, C++, R, SQL, Bash, LaTeX</p>
-                            <p style="margin: 0;">scikit-learn, JSON, JUnit, NumPy, Matplotlib, pandas</p>
-                            <p style="margin: 0;">GitHub, Cloudflare, Jupyter, MATLAB, Excel, Workday</p>
-                            <p style="margin: 0;">JavaScript, HTML, CSS, Streamlit</p>
-                            <p style="margin: 0;">VS Code, IntelliJ IDEA, SQL Workbench, Overleaf</p>
+                            <p style="margin: 0;">Python, R, SQL, Java, C++, C, Bash, LaTeX</p>
+                            <p style="margin: 0;">scikit-learn, pandas, NumPy, Matplotlib, Jupyter, MATLAB</p>
+                            <p style="margin: 0;">Streamlit, JavaScript, HTML, CSS</p>
+                            <p style="margin: 0;">GitHub, Excel, SQL Workbench, Cloudflare, Workday</p>
+                            <p style="margin: 0;">JUnit, JSON</p>
+                            <p style="margin: 0;">VS Code, IntelliJ IDEA, Overleaf</p>
                         </div>
                     </div>
                 </div>
@@ -159,15 +163,14 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Indigenous Procurement Administrator Co-op</strong> | UBC Finance </p>
-                        <span>Jan - Aug 2024</span>
+                        <span>Jan–Aug 2024</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Led data collection and analysis for UBC's Canadian Supply Chain Act report, assessing potential risks of forced/child labour</li>
-                        <li>Developed processes for identifying sustainable companies through web scraping and certification cross-referencing</li>
-                        <li>Created standard operating procedures and business plans to guide procurement and sustainability efforts</li>
-                        <li>Analyzed Workday Report and Excel spend data to support UBC's sustainability initiatives</li>
-
-                        <li><strong>Technologies: </strong>SQL, Excel, Workday, Qualtrics, MS Office</li>
+                        <li>Led data collection and analysis for UBC's Supply Chain Act report on labour risks</li>
+                        <li>Created SOPs and business plans to guide procurement and sustainability efforts</li>
+                        <li>Analyzed Workday Report and Excel spend data to support UBC sustainability initiatives</li>
+                        <li>Developed processes for identifying sustainable companies via web scraping and certification checks</li>
+                        <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Workday, Qualtrics, MS Office</li>
                     </ul>
                 </div>
 
@@ -176,35 +179,34 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
 
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>SympFlaura: Symptoms & Flareup Tracker</strong> | Machine Learning</p>
-                        <span> May 2025 - Present</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Developed a machine learning model to predict symptoms and flareups based on user input</li>
-                        <li>Utilized Streamlit to create a user-friendly web application for the model</li>
-                        <li>Utilized Streamlit authenticator to secure the application with data persistence</li>
-                        <li><strong>Technologies: </strong>Python, Streamlit authenticator, scikit-learn</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Indigenous Business Directory</strong> | UBC Finance</p>
-                        <span>Jan - Aug 2024</span>
+                        <span>Jan–Aug 2024</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                         <li>Development, optimization, and maintenance of Excel business directory</li>
-                        <li>Migration of directory to SQL, enhancing data security and scalability</li>
-                        <li>Streamlined supplier information gathering process via Qualtrics surveys</li>
-                        <li><strong>Technologies: </strong>SQL, Excel, Qualtrics</li>
+                        <li>Migrated Excel directory to SQL, improving scalability and data security</li>
+                        <li>Automated supplier data collection with Qualtrics surveys, reducing manual entry</li>
+                        <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Qualtrics</li>
+                    </ul>
+
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>SympFlaura: Symptoms & Flareup Tracker</strong> | Machine Learning</p>
+                        <span> May 2025–Present</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Developed ML model with scikit-learn to predict chronic illness flareups from user symptom inputs</li>
+                        <li>Deployed as a secure Streamlit app with authentication, improving accessibility and persistence</li>
+                        <li class="tech-line"><strong>Technologies: </strong>Python, Streamlit Authenticator, scikit-learn</li>
                     </ul>
 
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Portfolio Website</strong> | Web Development</p>
-                        <span>Jun 2024 - Present</span>
+                        <span>Jun 2024–Present</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                         <li>Developed a personal portfolio website to showcase projects and skills</li>
-                        <li>Utilized HTML, CSS, and JavaScript to create a responsive and visually appealing design</li>
-                        <li><strong>Technologies: </strong>HTML, CSS, JavaScript, VS Code</li>
+                        <li>Optimized interface for usability and aesthetics, showcasing technical work effectively</li>
+                        <li class="tech-line"><strong>Technologies: </strong>HTML, CSS, JavaScript, VS Code</li>
                     </ul>
 
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -212,10 +214,9 @@
                         <span>Dec 2023</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Developed a Java-based digital tool for managing pool chemistry, featuring data logging, analysis, and alerting functionalities via exception throwing</li>
-                        <li>Implemented data persistence for saving and loading logbooks</li>
-                        <li>Designed an intuitive UI for monitoring current and historical readings</li>
-                        <li><strong>Technologies: </strong>Java, JUnit, JSON, IntelliJ IDEA</li>
+                        <li>Developed a Java tool to digitally track pool chemistry with exception alerts and data persistence</li>
+                        <li>Designed an intuitive UI to simplify monitoring and historical review of chemical levels</li>
+                        <li class="tech-line"><strong>Technologies: </strong>Java, JUnit, JSON, IntelliJ IDEA</li>
                     </ul>
 
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -223,9 +224,9 @@
                         <span>Jun 2023</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Analyzed pool chlorine data via constructing functions to indicate whether a level is in range, its difference from the ideal range, and the quantity of chemicals required to correct it</li>
-                        <li>Proposing program to local pool as a replacement for manual recording and calculations</li>
-                        <li><strong>Technologies: </strong>Python, Jupyter, GitHub</li>
+                        <li>Created Python functions to evaluate chlorine levels and recommend dosage adjustments</li>
+                        <li>Proposed adoption to replace manual logging, reducing human error in pool maintenance</li>
+                        <li class="tech-line"><strong>Technologies: </strong>Python, Jupyter, GitHub</li>
                     </ul>
 
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -233,9 +234,9 @@
                         <span>Apr 2023</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Performed statistical analysis on vehicle theft data using R, including two-sample z-tests and bootstrap confidence intervals</li>
-                        <li>Constructed a final analysis based on hypothesis testing results</li>
-                        <li><strong>Technologies: </strong>R, Jupyter, GitHub</li>
+                        <li>Performed hypothesis testing and bootstrap confidence intervals on theft data in R</li>
+                        <li>Summarized results in a final report highlighting significant theft trends</li>
+                        <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub</li>
                     </ul>
 
                 </div>
@@ -260,19 +261,19 @@
                 <span>Dec 2022</span>
             </div>
             <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                <li>Designed and validated a multiple linear regression model to explore relationships between heart disease symptoms and age</li>
-                <li>Managed a group project using GitHub for version control and collaboration</li>
-                <li><strong>Technologies: </strong>R, Jupyter, GitHub</li>
+                <li>Built regression model linking symptoms with age, validating results with statistical tests</li>
+                <li>Led collaborative workflow with GitHub, streamlining team contributions</li>
+                <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub</li>
             </ul>
 
             <div style="display: flex; justify-content: space-between; align-items: baseline;">
                 <p style="margin: 0;"><strong>Resonant Frequency vs. Temperature Analysis</strong> | Data Science, Physics</p>
-                <span>Jan - Mar 2022</span>
+                <span>Jan–Mar 2022</span>
             </div>
             <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                <li>Explored the relationship between increased temperature and frequency of a trumpet</li>
-                <li>Analyzed frequency spectrum data with Excel and found statistically significant results</li>
-                <li><strong>Technologies: </strong>Excel, SpectrumLab</li>
+                <li>Analyzed trumpet frequency data with Excel and SpectrumLab to assess the impact of heat</li>
+                <li>Identified statistically significant results, contributing to physics coursework research</li>
+                <li class="tech-line"><strong>Technologies: </strong>Excel, SpectrumLab</li>
             </ul>
             <div class="container center-text">
                 <div class="section">
@@ -280,12 +281,13 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Swim Instructor/Lifeguard</strong> | North Vancouver Recreation & Culture </p>
-                        <span>Sep 2019 - Present</span>
+                        <span>Sep 2019–Present</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Collect and analyze pool chemistry data, communicating with coworkers to adjust pool chemistry</li>
-                        <li>Utilize Excel and PerfectMIND software for swim skills tracking and lessons scheduling</li>
-                        <li><strong>Technologies: </strong>Excel, PerfectMind</li>
+                        <li>Collected and analyzed pool chemistry data, ensuring compliance with safety standards</li>
+                        <li>Balanced pool chemical levels in coordination with coworkers to maintain safe swim conditions</li>
+                        <li>Tracked swim skills and scheduled lessons using Excel and PerfectMIND software</li>
+                        <li class="tech-line"><strong>Technologies: </strong>Excel, PerfectMIND</li>
                     </ul>
                 </div>
 
@@ -297,23 +299,23 @@
                         <span>Mar 2022</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Presented research findings and facilitated discussions in a two-day scientific conference.</li>
+                        <li>Moderated sessions and presented findings at UBC’s science conference</li>
                     </ul>
                     
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Flute and Ensemble Lessons</strong> | Community & Private</p>
-                        <span>Sep 2016 - Present</span>
+                        <span>Sep 2016–Present</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Tutored, led ensemble clinics, and conducted junior concert bands.</li>
+                        <li>Tutored flute students, led ensemble clinics, and conducted junior bands</li>
                     </ul>
                     
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Junior Summer Camp Counselor</strong> | BC SPCA</p>
-                        <span>Aug 2016 - Aug 2017</span>
+                        <span>Aug 2016–Aug 2017</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Educated children aged 5-12 about animal welfare, including responsible pet care and the importance of adopting rescue animals.</li>
+                        <li>Educated children on animal welfare at BC SPCA summer camp</li>
                     </ul>
                 </div>
 
