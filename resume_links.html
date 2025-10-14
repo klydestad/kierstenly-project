@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiersten Lyde-Stad</title>
+    <style>
+        @page {
+            size: 8.5in 11in;
+            margin: 0;
+        }
+        body {
+            font-family: 'Calibri Body', sans-serif;
+            font-size: 12px;
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            color: #002145; /* UBC blue */
+        }
+        .page {
+            width: 8.5in;
+            height: 11in;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: [content-start] 6.5in [content-end]; /* Adjusted for 1-inch margins */
+            page-break-after: always;
+            padding: 0.25in 1in 0.5in 1in; /* Reduced top padding to 0.25 inch */
+            box-sizing: border-box;
+            overflow: hidden; /* Hide overflow */
+        }
+        .header {
+            grid-column: content-start / content-end;
+            grid-row: 1;
+            text-align: right;
+            padding: 0;
+            margin-bottom: -0.67in; 
+            position: relative; /* For positioning the image */
+            height: 1.5in; /* Set a fixed height for the header */
+            overflow: visible; 
+        }
+        .header img {
+            height: auto;
+            position: absolute;
+            right: -0.75in; /* Position 0.5 inches from the right edge of the content area */
+            top: 0;
+            width: 80%; /* Set width to 66% of the content area */
+            max-height: 100%; /* Ensure image doesn't exceed header height */
+        }
+        .content {
+            grid-column: content-start / content-end;
+            grid-row: 2;
+            overflow: hidden;
+            padding: 0;
+            position: relative;
+            padding-bottom: 0.25in;
+        }
+        .content > .container:first-child {
+            margin-top: 0;
+        }
+        .content > .container:first-child > p:first-child {
+            margin-top: 5px;
+        }
+        .footer {
+            grid-column: content-start / content-end;
+            grid-row: 3;
+            text-align: center;   
+        }
+        .page:first-of-type .footer {
+            display: none;
+        }
+        h1 {
+            font-family: 'Calibri Body', sans-serif;
+            font-size: 22px;
+            margin-top: -10px;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 1;
+            color: #002145; /* UBC blue */
+        }
+        h2 {
+            font-family: 'Calibri Body', sans-serif;
+            font-size: 12px;
+            color: #002145; /* UBC blue */
+            margin-bottom: 5px;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        /* Add this CSS to center text and adjust margins */
+        .center-text {
+            text-align: center;
+        }
+
+        /* Add this new style for the title */
+        title {
+            font-family: 'Calibri Body', sans-serif;
+            font-size: 22px;
+        }
+
+        /* Add this new style for links */
+        a, a:visited {
+            color: #0000EE; /* Default link blue color */
+            text-decoration: underline;
+        }
+
+        /* Add this new style for the tech line */
+        .tech-line {
+            list-style-type: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header">
+        </div>
+        <div class="content">
+            <div class="container center-text">
+                <p style="margin-top: 0; margin-bottom: 0; font-size: 22px;">Kiersten Lyde-Stad</p>
+                <p style="margin-top: 0; margin-bottom: 0;">Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year</p>
+                <p style="margin-top: 0; margin-bottom: 0;">
+                    <a href="mailto:klyde-stad@outlook.com">klyde-stad@outlook.com</a> | (604) 603-4429 | 
+                    <a href="https://github.com/klydestad">https://github.com/klydestad</a><br>
+                    <a href="https://www.kierstenly.dev/">https://www.kierstenly.dev/</a> | <a href="https://www.linkedin.com/in/kierstenly/">www.linkedin.com/in/kierstenly</a>
+                </p>
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL SKILLS</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; width: 100%; position: relative;">
+                        <div style="flex: 0 0 30%; display: flex; flex-direction: column; text-align: left;">
+                            <p style="margin: 0;"><strong>Programming Languages:</strong></p>
+                            <p style="margin: 0;"><strong>Data Science & ML:</strong></p>
+                            <p style="margin: 0;"><strong>Web Development:</strong></p>
+                            <p style="margin: 0;"><strong>Tools & Platforms:</strong></p>
+                            <p style="margin: 0;"><strong>Testing & Development:</strong></p>
+                            <p style="margin: 0;"><strong>Environments:</strong></p>
+                        </div>
+                        <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: left;">
+                            <p style="margin: 0;">Python, R, SQL, Java, C++, C, TypeScript, LaTeX</p>
+                            <p style="margin: 0;">scikit-learn, pandas, NumPy, Matplotlib, Jupyter, MATLAB</p>
+                            <p style="margin: 0;">JavaScript, Node.js, HTML, CSS, Streamlit</p>
+                            <p style="margin: 0;">GitHub, Excel, SQL Workbench, Cloudflare, Workday</p>
+                            <p style="margin: 0;">JUnit, JSON, Mocha, Chai</p>
+                            <p style="margin: 0;">VS Code, IntelliJ IDEA, Overleaf</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL WORK EXPERIENCE</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Indigenous Procurement Administrator Co-op</strong> | UBC Finance </p>
+                        <span>Jan–Aug 2024</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Led data collection and analysis for UBC's Supply Chain Act report on labour risks</li>
+                        <li>Created SOPs and business plans to guide procurement and sustainability efforts</li>
+                        <li>Analyzed Workday Report and Excel spend data to support UBC sustainability initiatives</li>
+                        <li>Developed processes for identifying sustainable companies via web scraping and certification checks</li>
+                        <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Workday, Qualtrics, MS Office</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL PROJECTS</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+
+                    
+            <!-- Indigenous Business Directory - no public GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Indigenous Business Directory</strong> | UBC Finance</p>
+                <span>Jan–Aug 2024</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Development, optimization, and maintenance of Excel business directory</li>
+                <li>Migrated Excel directory to SQL, improving scalability and data security</li>
+                <li>Automated supplier data collection with Qualtrics surveys, reducing manual entry</li>
+                <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Qualtrics</li>
+            </ul>
+
+            <!-- SympFlaura - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>SympFlaura: Symptoms & Flareup Tracker</strong> | Machine Learning</p>
+                <span> May 2025–Present</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Developed ML model with scikit-learn to predict chronic illness flareups from user symptom inputs</li>
+                <li>Deployed as a secure Streamlit app with authentication, improving accessibility and persistence</li>
+                <li class="tech-line"><strong>Technologies: </strong>Python, Streamlit Authenticator, scikit-learn | <strong>GitHub:</strong> <a href="https://github.com/klydestad/SympFlaura">github.com/klydestad/SympFlaura</a></li>
+            </ul>
+
+            <!-- Portfolio Website - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Portfolio Website</strong> | Web Development</p>
+                <span>Jun 2024–Present</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Developed a personal portfolio website to showcase projects and skills</li>
+                <li>Optimized interface for usability and aesthetics, showcasing technical work effectively</li>
+                <li class="tech-line"><strong>Technologies: </strong>HTML, CSS, JavaScript, VS Code | <strong>GitHub:</strong> <a href="https://github.com/klydestad/kierstenly-project">github.com/klydestad/kierstenly-project</a></li>
+            </ul>
+
+            <!-- Pool Chemistry Logbook - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Pool Chemistry Logbook</strong> | Software Construction</p>
+                <span>Dec 2023</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Developed a Java tool to digitally track pool chemistry with exception alerts and data persistence</li>
+                <li>Designed an intuitive UI to simplify monitoring and historical review of chemical levels</li>
+                <li class="tech-line"><strong>Technologies: </strong>Java, JUnit, JSON, IntelliJ IDEA | <strong>GitHub:</strong> <a href="https://github.com/klydestad/pool-chem-logbook">github.com/klydestad/pool-chem-logbook</a></li>
+            </ul>
+
+            <!-- Pool Chemistry Diagnostic Tool - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Pool Chemistry Diagnostic Tool</strong> | Data Analysis</p>
+                <span>Jun 2023</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Created Python functions to evaluate chlorine levels and recommend dosage adjustments</li>
+                <li>Proposed adoption to replace manual logging, reducing human error in pool maintenance</li>
+                <li class="tech-line"><strong>Technologies: </strong>Python, Jupyter, GitHub | <strong>GitHub:</strong> <a href="https://github.com/klydestad/pool-chem">github.com/klydestad/pool-chem</a></li>
+            </ul>
+
+            <!-- Vehicle Theft Rates Analysis - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Vehicle Theft Rates Analysis</strong> | Statistical Inference</p>
+                <span>Apr 2023</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Performed hypothesis testing and bootstrap confidence intervals on theft data in R</li>
+                <li>Summarized results in a final report highlighting significant theft trends</li>
+                <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub | <strong>GitHub:</strong> <a href="https://github.com/klydestad/vehicle-theft-rates">github.com/klydestad/vehicle-theft-rates</a></li>
+            </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p style="color: #002145;">Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="header">
+            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header">
+        </div>
+        <div class="content">
+        
+        <br>
+
+
+            <!-- Heart Disease Symptom Analysis - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Heart Disease Symptom Analysis</strong> | Data Science</p>
+                <span>Dec 2022</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Built regression model linking symptoms with age, validating results with statistical tests</li>
+                <li>Led collaborative workflow with GitHub, streamlining team contributions</li>
+                <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub | <strong>GitHub:</strong> <a href="https://github.com/klydestad/heart-disease-vs-age">github.com/klydestad/heart-disease-vs-age</a></li>
+            </ul>
+
+            <!-- Resonant Frequency vs. Temperature Analysis - add GitHub -->
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <p style="margin: 0;"><strong>Resonant Frequency vs. Temperature Analysis</strong> | Data Science, Physics</p>
+                <span>Jan–Mar 2022</span>
+            </div>
+            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                <li>Analyzed trumpet frequency data with Excel and SpectrumLab to assess the impact of heat</li>
+                <li>Identified statistically significant results, contributing to physics coursework research</li>
+                <li class="tech-line"><strong>Technologies: </strong>Excel, SpectrumLab | <strong>GitHub:</strong> <a href="https://github.com/klydestad/frequency-vs-temp">github.com/klydestad/frequency-vs-temp</a></li>
+            </ul>
+
+            <div class="container center-text">
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">WORK EXPERIENCE</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Swim Instructor/Lifeguard</strong> | North Vancouver Recreation & Culture </p>
+                        <span>Sep 2019–Present</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Collected and analyzed pool chemistry data, ensuring compliance with safety standards</li>
+                        <li>Balanced pool chemical levels in coordination with coworkers to maintain safe swim conditions</li>
+                        <li>Tracked swim skills and scheduled lessons using Excel and PerfectMIND software</li>
+                        <li class="tech-line"><strong>Technologies: </strong>Excel, PerfectMIND</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">VOLUNTEER EXPERIENCE</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Science Conference Moderator & Participant</strong> | UBC</p>
+                        <span>Mar 2022</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Moderated sessions and presented findings at UBC’s science conference</li>
+                    </ul>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Flute and Ensemble Lessons</strong> | Community & Private</p>
+                        <span>Sep 2016–Present</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Tutored flute students, led ensemble clinics, and conducted junior bands</li>
+                    </ul>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Junior Summer Camp Counselor</strong> | BC SPCA</p>
+                        <span>Aug 2016–Aug 2017</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Educated children on animal welfare at BC SPCA summer camp</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">EDUCATION</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>B.Sc. Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year</strong></p>
+                        <span>Expected Graduation 2026</span>
+                    </div>
+                    <p style="text-align: left; margin-top: 0;">University of British Columbia, Vancouver, BC</p>
+                </div>
+
+                <div class="section">
+                    <h2 style="text-align: left; margin-bottom: 0;">CERTIFICATIONS</h2>
+                    <hr style="margin: 0; border-top: 1px solid black;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Standard First Aid & CPR/AED C</strong></p>
+                        <span>Jun 2025</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Workplace Hazardous Materials Information System Training</strong></p>
+                        <span>Feb 2024</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>National Lifeguard Pool Option</strong></p>
+                        <span>Jul 2023</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>WHMIS for Workers </strong></p>
+                        <span>May 2023</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>WorkSafe BC Workplace Safety</strong></p>
+                        <span>Feb 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p style="color: #002145;">Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
+        </div>
+    </div>
+</body>
+</html>
