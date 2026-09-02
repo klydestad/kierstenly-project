@@ -47,31 +47,28 @@ const INFO_DATA = {
   ],
 
   work: [
-    {
-      title: "Software Developer Part-time Contractor",
-      organization: "Terra Dygital Solutions Inc.",
-      dateRange: "Sep 2026–Present",
-      bullets: [
-        "Continued building data pipelines in Microsoft Fabric and data models in SQL Server, and extending Power BI reporting, part-time following the co-op",
-        "Extended a C#/.NET automation tool that authenticates against third-party APIs, parses report data, and loads it into SQL Server with validation testing",
-        "Supported client requirements gathering and maintained technical documentation"
-      ],
-      showOnWebsite: true
-    },
-    {
-      title: "Developer Co-op",
-      organization: "Terra Dygital Solutions Inc.",
-      dateRange: "Jan–Aug 2026",
-      bullets: [
-        "Engineered data pipelines in Microsoft Fabric (Lakehouses, DataFlows) with SQL Server/SSMS-backed data models and Azure Logic Apps, and built Power BI reports and automated workflows for a client",
-        "Wrote data transformation logic with Power Query to build reporting templates, and developed Power BI dashboards for data analysis across a second client engagement",
-        "Developed data-driven applications (canvas and model-driven) integrating backend data sources for a third client",
-        "Extended an existing C#/.NET console application's architecture (interfaces, helper classes) to migrate internal ticket-routing logic to a new platform, integrating external systems via configured REST API payload/endpoint logic, with Azure DevOps and Git for source control",
-        "Built an end-to-end automation pipeline in Python and C# (Selenium) to authenticate against third-party systems, extract data via REST APIs and browser automation, and parse and load structured report data into SQL Server, including SQL view design and validation testing",
-        "Gathered technical requirements through client-facing meetings across multiple engagements and produced technical and process documentation"
-      ],
-      showOnWebsite: true
-    },
+            {
+            title: "Software Developer Part-time Contractor",
+            organization: "Terra Dygital Solutions Inc.",
+            dateRange: "Sep 2026–Present",
+            bullets: [
+                "Built data pipelines in Microsoft Fabric and extended C#/.NET automation tool for API integration and data validation",
+                "Gathered client requirements and maintained technical documentation"
+            ],
+            showOnWebsite: true
+            },
+            {
+            title: "Developer Co-op",
+            organization: "Terra Dygital Solutions Inc.",
+            dateRange: "Jan–Aug 2026",
+            bullets: [
+                "Engineered data pipelines in Microsoft Fabric with SQL Server, Power BI dashboards, and Azure Logic Apps across three clients",
+                "Developed Power Query transformations for reporting templates and data-driven applications with backend integration",
+                "Extended C#/.NET application architecture and built Python/C# automation pipeline (Selenium) for third-party data extraction and SQL Server loading",
+                "Gathered requirements through client meetings and produced technical documentation"
+            ],
+            showOnWebsite: true
+            },
     {
       title: "Indigenous Procurement Administrator Co-op",
       organization: "UBC Finance",
@@ -87,10 +84,10 @@ const INFO_DATA = {
     {
       title: "Swim Instructor/Lifeguard",
       organization: "North Vancouver Recreation & Culture",
-      dateRange: "Sep 2019 – Present",
+      dateRange: "Sep 2019 – Jan 2024",
       bullets: [
-        "Collect and analyze pool chemistry data, communicating with coworkers to adjust pool chemistry",
-        "Utilize Excel and PerfectMIND software for swim skills tracking and lessons scheduling"
+        "Collected and analyze pool chemistry data, communicating with coworkers to adjust pool chemistry",
+        "Utilized Excel and PerfectMIND software for swim skills tracking and lessons scheduling"
       ],
       showOnWebsite: true
     }
@@ -100,7 +97,7 @@ const INFO_DATA = {
     {
       title: "Science One Mentor",
       organization: "UBC",
-      dateRange: "Sep 2022 – Present",
+      dateRange: "Sep 2022 – April 2023",
       bullets: [
         "Providing guidance to first-year students in UBC's accelerated Science One program"
       ],
