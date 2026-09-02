@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiersten Lyde-Stad</title>
+    <title>Kiersten Lyde-Stad Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
         @page {
             size: 8.5in 11in;
@@ -16,28 +16,18 @@
             line-height: 1.3;
             margin: 0;
             padding: 0;
-            color: #002145; /* UBC blue */
+            color: #002145;
         }
         .page {
             width: 8.5in;
             height: 11in;
             display: grid;
             grid-template-rows: auto 1fr auto;
-            grid-template-columns: [content-start] 6.5in [content-end]; /* Adjusted for 1-inch margins */
+            grid-template-columns: [content-start] 6.5in [content-end];
             page-break-after: always;
-            padding: 0.25in 1in 0.5in 1in; /* Reduced top padding to 0.25 inch */
+            padding: 0.25in 1in 0.5in 1in;
             box-sizing: border-box;
-            overflow: hidden; /* Hide overflow */
-        }
-        .header {
-            grid-column: content-start / content-end;
-            grid-row: 1;
-            text-align: right;
-            padding: 0;
-            margin-bottom: -0.67in;
-            position: relative; /* For positioning the image */
-            height: 1.5in; /* Set a fixed height for the header */
-            overflow: visible;
+            overflow: hidden;
         }
         .content {
             grid-column: content-start / content-end;
@@ -64,19 +54,18 @@
         h1 {
             font-family: 'Calibri Body', sans-serif;
             font-size: 22px;
-            margin-top: -10px;
+            margin-top: 0;
             margin-bottom: 0;
             position: relative;
             z-index: 1;
-            color: #002145; /* UBC blue */
+            color: #002145;
         }
         h2 {
             font-family: 'Calibri Body', sans-serif;
             font-size: 12px;
-            color: #002145; /* UBC blue */
+            color: #002145;
             margin-bottom: 5px;
         }
-
         .container {
             width: 100%;
             margin: auto;
@@ -88,43 +77,39 @@
         ul {
             padding-left: 20px;
         }
-        /* Add this CSS to center text and adjust margins */
         .center-text {
             text-align: center;
         }
-
-        /* Add this new style for the title */
-        title {
-            font-family: 'Calibri Body', sans-serif;
-            font-size: 22px;
-        }
-
-        /* Add this new style for links */
         a, a:visited {
-            color: #0000EE; /* Default link blue color */
+            color: #0000EE;
             text-decoration: underline;
         }
-
-        /* Add this new style for the tech line */
         .tech-line {
             list-style-type: none;
         }
-
-
+        .header {
+            grid-column: content-start / content-end;
+            grid-row: 1;
+            text-align: center;
+            padding: 0;
+            margin-bottom: 0.1in;
+        }
     </style>
 </head>
 <body>
-    <script src="skills-data.js"></script>
-    <script src="skills-render.js"></script>
-    <script src="resume-data.js"></script>
+    <script src="info-data.js"></script>
+    <script src="projects-data.js"></script>
     <script src="resume-render.js"></script>
+    <script src="projects-render.js"></script>
 
+    <!-- PAGE 1 -->
     <div class="page">
+        <div class="header">
+            <div id="header"></div>
+            <script>renderHeader("header");</script>
+        </div>
         <div class="content">
             <div class="container center-text">
-                <div id="header"></div>
-                <script>renderHeader("header");</script>
-
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL SKILLS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
@@ -133,11 +118,11 @@
                 <script>renderSkillsTable("skills-table");</script>
 
                 <div class="section">
-                    <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL WORK EXPERIENCE</h2>
+                    <h2 style="text-align: left; margin-bottom: 0;">WORK EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div id="technical-work"></div>
+                    <div id="work-experience"></div>
                 </div>
-                <script>renderEntries("technical-work", RESUME_DATA.technicalExperience);</script>
+                <script>renderEntries("work-experience", INFO_DATA.work);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL PROJECTS</h2>
@@ -145,10 +130,9 @@
                     <div id="technical-projects-page1"></div>
                 </div>
                 <script>
-                    renderEntries(
-                        "technical-projects-page1",
-                        RESUME_DATA.projects.slice(0, PROJECTS_PAGE_SPLIT)
-                    );
+                    const PROJECTS_PAGE_SPLIT = 3;
+                    renderProjectsTable("technical-projects-page1", 
+                        PROJECTS_DATA.projects.slice(0, PROJECTS_PAGE_SPLIT));
                 </script>
             </div>
         </div>
@@ -158,47 +142,40 @@
         </div>
     </div>
 
+    <!-- PAGE 2 -->
     <div class="page">
-
-        <br>
-
-        <!-- Continuation of TECHNICAL PROJECTS from page 1 — no header repeated -->
-        <div id="technical-projects-page2"></div>
-        <script>
-            renderEntries(
-                "technical-projects-page2",
-                RESUME_DATA.projects.slice(PROJECTS_PAGE_SPLIT)
-            );
-        </script>
-
+        <div class="content">
             <div class="container center-text">
                 <div class="section">
-                    <h2 style="text-align: left; margin-bottom: 0;">WORK EXPERIENCE</h2>
+                    <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL PROJECTS (continued)</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div id="work-experience"></div>
+                    <div id="technical-projects-page2"></div>
                 </div>
-                <script>renderEntries("work-experience", RESUME_DATA.workExperience);</script>
+                <script>
+                    renderProjectsTable("technical-projects-page2", 
+                        PROJECTS_DATA.projects.slice(PROJECTS_PAGE_SPLIT));
+                </script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">VOLUNTEER EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div id="volunteer-experience"></div>
                 </div>
-                <script>renderEntries("volunteer-experience", RESUME_DATA.volunteerExperience);</script>
+                <script>renderEntries("volunteer-experience", INFO_DATA.volunteer);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">EDUCATION</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div id="education"></div>
                 </div>
-                <script>renderEducation("education", RESUME_DATA.education);</script>
+                <script>renderEducation("education");</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">CERTIFICATIONS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div id="certifications"></div>
                 </div>
-                <script>renderCertifications("certifications", RESUME_DATA.certifications);</script>
+                <script>renderCertifications("certifications");</script>
             </div>
         </div>
         <div class="footer">

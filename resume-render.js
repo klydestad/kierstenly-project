@@ -1,17 +1,14 @@
-// Renders RESUME_DATA (see resume-data.js) into resume.html.
-// Include resume-data.js before this file.
-//
-// Usage — see the container ids referenced below; resume.html wires these
-// up right after each section's <h2>/<hr>, same pattern as skills-render.js.
+// resume-render.js
+// Renders resume layouts using data from info-data.js and projects-data.js
 
 function renderHeader(containerId, data) {
-  data = data || RESUME_DATA.header;
+  data = data || INFO_DATA.header;
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = `
     <p style="margin-top: 0; margin-bottom: 0; font-size: 22px;">${data.name}</p>
-    <p style="margin-top: 0; margin-bottom: 0;">${data.tagline} </p>
+    <p style="margin-top: 0; margin-bottom: 0;">${data.tagline}</p>
     <p style="margin-top: 0; margin-bottom: 0;">
         <a href="mailto:${data.email}">${data.email}</a> | ${data.phone} |
         <a href="${data.github}">${data.github}</a><br>
@@ -20,29 +17,48 @@ function renderHeader(containerId, data) {
 }
 
 function renderFooter(containerId, data) {
-  data = data || RESUME_DATA.header;
+  data = data || INFO_DATA.header;
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = `
-    <p style="color: #002145;">${data.name} | <a href="mailto:${data.email}">${data.email}</a> | ${data.phone} </p>`;
+    <p style="color: #002145;">${data.name} | <a href="mailto:${data.email}">${data.email}</a> | ${data.phone}</p>`;
 }
 
-// Generic renderer for any "title | subtitle ... date ... bullets (+ optional
-// tech-line)" section: TECHNICAL WORK EXPERIENCE, TECHNICAL PROJECTS,
-// WORK EXPERIENCE, VOLUNTEER EXPERIENCE all share this shape.
+// Render skills in table format for resume
+function renderSkillsTable(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container || !INFO_DATA.skills) return;
+
+  const rows = INFO_DATA.skills
+    .map(
+      c => `
+        <p style="margin: 0; text-align: left;"><strong>${c.category}:</strong></p>
+        <div></div>
+        <p style="margin: 0; text-align: left;">${c.skills.join(", ")}</p>`
+    )
+    .join("");
+
+  container.innerHTML = `
+    <div style="display: grid; grid-template-columns: 30% 20% 50%; width: 100%; row-gap: 2px;">
+        ${rows}
+    </div>`;
+}
+
+// Generic renderer for entries with title, organization/subtitle, date, bullets, and optional tech
 function renderEntries(containerId, entries) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
   container.innerHTML = entries
     .map(e => {
+      const subtitle = e.subtitle || e.organization || "";
       const techLine = e.technologies
         ? `<li class="tech-line"><strong>Technologies: </strong>${e.technologies}</li>`
         : "";
       return `
     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-        <p style="margin: 0;"><strong>${e.title}</strong> | ${e.subtitle}</p>
+        <p style="margin: 0;"><strong>${e.title}</strong> | ${subtitle}</p>
         <span>${e.dateRange}</span>
     </div>
     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
@@ -53,11 +69,12 @@ function renderEntries(containerId, entries) {
     .join("\n");
 }
 
-function renderEducation(containerId, entries) {
+// Render education entries
+function renderEducation(containerId) {
   const container = document.getElementById(containerId);
-  if (!container) return;
+  if (!container || !INFO_DATA.education) return;
 
-  container.innerHTML = entries
+  container.innerHTML = INFO_DATA.education
     .map(
       ed => `
     <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -69,11 +86,12 @@ function renderEducation(containerId, entries) {
     .join("\n");
 }
 
-function renderCertifications(containerId, entries) {
+// Render certification entries
+function renderCertifications(containerId) {
   const container = document.getElementById(containerId);
-  if (!container) return;
+  if (!container || !INFO_DATA.certifications) return;
 
-  container.innerHTML = entries
+  container.innerHTML = INFO_DATA.certifications
     .map(
       c => `
     <div style="display: flex; justify-content: space-between; align-items: baseline;">
@@ -88,6 +106,7 @@ if (typeof module !== "undefined" && module.exports) {
   module.exports = {
     renderHeader,
     renderFooter,
+    renderSkillsTable,
     renderEntries,
     renderEducation,
     renderCertifications
