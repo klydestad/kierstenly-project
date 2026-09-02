@@ -34,10 +34,10 @@
             grid-row: 1;
             text-align: right;
             padding: 0;
-            margin-bottom: -0.67in; 
+            margin-bottom: -0.67in;
             position: relative; /* For positioning the image */
             height: 1.5in; /* Set a fixed height for the header */
-            overflow: visible; 
+            overflow: visible;
         }
         .content {
             grid-column: content-start / content-end;
@@ -56,7 +56,7 @@
         .footer {
             grid-column: content-start / content-end;
             grid-row: 3;
-            text-align: center;   
+            text-align: center;
         }
         .page:first-of-type .footer {
             display: none;
@@ -109,244 +109,101 @@
         .tech-line {
             list-style-type: none;
         }
-        
+
 
     </style>
 </head>
 <body>
+    <script src="skills-data.js"></script>
+    <script src="skills-render.js"></script>
+    <script src="resume-data.js"></script>
+    <script src="resume-render.js"></script>
+
     <div class="page">
         <div class="content">
             <div class="container center-text">
-                <p style="margin-top: 0; margin-bottom: 0; font-size: 22px;">Kiersten Lyde-Stad</p>
-                <p style="margin-top: 0; margin-bottom: 0;">Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year </p>
-                <p style="margin-top: 0; margin-bottom: 0;">
-                    <a href="mailto:klyde-stad@outlook.com">klyde-stad@outlook.com</a> | (604) 603-4429 | 
-                    <a href="https://github.com/klydestad">https://github.com/klydestad</a><br>
-                    <a href="https://www.kierstenly.dev/">https://www.kierstenly.dev/</a> | <a href="https://www.linkedin.com/in/kierstenly/">www.linkedin.com/in/kierstenly</a>
-                </p>
-
+                <div id="header"></div>
+                <script>renderHeader("header");</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL SKILLS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div id="skills-table"></div>
                 </div>
-
-                <script src="skills-data.js"></script>
-                <script src="skills-render.js"></script>
                 <script>renderSkillsTable("skills-table");</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL WORK EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Software Developer Part-time Contractor</strong> | Terra Dygital Solutions Inc.  </p>
-                        <span>Sep 2026–Present</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Continued building data pipelines in Microsoft Fabric and data models in SQL Server, and extending Power BI reporting, part-time following the co-op</li>
-                        <li>Extended a C#/.NET automation tool that authenticates against third-party APIs, parses report data, and loads it into SQL Server with validation testing</li>
-                        <li>Supported client requirements gathering and maintained technical documentation</li>
-                        <li class="tech-line"><strong>Technologies: </strong>C#, .NET, Python, SQL Server/SSMS, Power BI, Microsoft Fabric, Azure, REST APIs</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Developer Co-op</strong> | Terra Dygital Solutions Inc. </p>
-                        <span>Jan–Aug 2026</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Engineered data pipelines in Microsoft Fabric (Lakehouses, DataFlows) with SQL Server/SSMS-backed data models and Azure Logic Apps, and built Power BI reports and automated workflows for a client</li>
-                        <li>Wrote data transformation logic with Power Query to build reporting templates, and developed Power BI dashboards for data analysis across a second client engagement</li>
-                        <li>Developed data-driven applications (canvas and model-driven) integrating backend data sources for a third client</li>
-                        <li>Extended an existing C#/.NET console application's architecture (interfaces, helper classes) to migrate internal ticket-routing logic to a new platform, integrating external systems via configured REST API payload/endpoint logic, with Azure DevOps and Git for source control</li>
-                        <li>Built an end-to-end automation pipeline in Python and C# (Selenium) to authenticate against third-party systems, extract data via REST APIs and browser automation, and parse and load structured report data into SQL Server, including SQL view design and validation testing</li>
-                        <li>Gathered technical requirements through client-facing meetings across multiple engagements and produced technical and process documentation</li>
-                        <li class="tech-line"><strong>Technologies: </strong>C#, .NET, Python, Selenium, SQL Server/SSMS, REST APIs, Microsoft Fabric, Power BI, Azure Logic Apps, Azure DevOps, Git, Power Platform, SharePoint</li>
-                    </ul>
-
+                    <div id="technical-work"></div>
                 </div>
+                <script>renderEntries("technical-work", RESUME_DATA.technicalExperience);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL PROJECTS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Indigenous Business Directory</strong> | UBC Finance</p>
-                        <span>Jan–Aug 2024</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Development, optimization, and maintenance of Excel business directory</li>
-                        <li>Migrated Excel directory to SQL, improving scalability and data security</li>
-                        <li>Automated supplier data collection with Qualtrics surveys, reducing manual entry</li>
-                        <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Qualtrics</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>SympFlaura: Symptoms & Flareup Tracker</strong> | Machine Learning</p>
-                        <span> May 2025–Present</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Developed ML model with scikit-learn to predict chronic illness flareups from user symptom inputs</li>
-                        <li>Deployed as a secure Streamlit app with authentication, improving accessibility and persistence</li>
-                        <li class="tech-line"><strong>Technologies: </strong>Python, Streamlit Authenticator, scikit-learn</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Portfolio Website</strong> | Web Development</p>
-                        <span>Jun 2024–Present</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Developed a personal portfolio website to showcase projects and skills</li>
-                        <li>Optimized interface for usability and aesthetics, showcasing technical work effectively</li>
-                        <li class="tech-line"><strong>Technologies: </strong>HTML, CSS, JavaScript, VS Code</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Pool Chemistry Logbook</strong> | Software Construction</p>
-                        <span>Dec 2023</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Developed a Java tool to digitally track pool chemistry with exception alerts and data persistence</li>
-                        <li>Designed an intuitive UI to simplify monitoring and historical review of chemical levels</li>
-                        <li class="tech-line"><strong>Technologies: </strong>Java, JUnit, JSON, IntelliJ IDEA</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Pool Chemistry Diagnostic Tool</strong> | Data Analysis</p>
-                        <span>Jun 2023</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Created Python functions to evaluate chlorine levels and recommend dosage adjustments</li>
-                        <li>Proposed adoption to replace manual logging, reducing human error in pool maintenance</li>
-                        <li class="tech-line"><strong>Technologies: </strong>Python, Jupyter, GitHub</li>
-                    </ul>
-
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Vehicle Theft Rates Analysis</strong> | Statistical Inference</p>
-                        <span>Apr 2023</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Performed hypothesis testing and bootstrap confidence intervals on theft data in R</li>
-                        <li>Summarized results in a final report highlighting significant theft trends</li>
-                        <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub</li>
-                    </ul>
-
+                    <div id="technical-projects-page1"></div>
                 </div>
+                <script>
+                    renderEntries(
+                        "technical-projects-page1",
+                        RESUME_DATA.projects.slice(0, PROJECTS_PAGE_SPLIT)
+                    );
+                </script>
             </div>
         </div>
         <div class="footer">
-            <p style="color: #002145;">Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
+            <div id="footer-page1"></div>
+            <script>renderFooter("footer-page1");</script>
         </div>
     </div>
 
     <div class="page">
-        
+
         <br>
 
+        <!-- Continuation of TECHNICAL PROJECTS from page 1 — no header repeated -->
+        <div id="technical-projects-page2"></div>
+        <script>
+            renderEntries(
+                "technical-projects-page2",
+                RESUME_DATA.projects.slice(PROJECTS_PAGE_SPLIT)
+            );
+        </script>
 
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <p style="margin: 0;"><strong>Heart Disease Symptom Analysis</strong> | Data Science</p>
-                <span>Dec 2022</span>
-            </div>
-            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                <li>Built regression model linking symptoms with age, validating results with statistical tests</li>
-                <li>Led collaborative workflow with GitHub, streamlining team contributions</li>
-                <li class="tech-line"><strong>Technologies: </strong>R, Jupyter, GitHub</li>
-            </ul>
-
-            <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <p style="margin: 0;"><strong>Resonant Frequency vs. Temperature Analysis</strong> | Data Science, Physics</p>
-                <span>Jan–Mar 2022</span>
-            </div>
-            <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                <li>Analyzed trumpet frequency data with Excel and SpectrumLab to assess the impact of heat</li>
-                <li>Identified statistically significant results, contributing to physics coursework research</li>
-                <li class="tech-line"><strong>Technologies: </strong>Excel, SpectrumLab</li>
-            </ul>
             <div class="container center-text">
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">WORK EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Swim Instructor/Lifeguard</strong> | North Vancouver Recreation & Culture </p>
-                        <span>Sep 2019–Jan 2024</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Collected and analyzed pool chemistry data, ensuring compliance with safety standards</li>
-                        <li>Balanced pool chemical levels in coordination with coworkers to maintain safe swim conditions</li>
-                        <li>Tracked swim skills and scheduled lessons using Excel and PerfectMIND software</li>
-                        <li class="tech-line"><strong>Technologies: </strong>Excel, PerfectMIND</li>
-                    </ul>
+                    <div id="work-experience"></div>
                 </div>
+                <script>renderEntries("work-experience", RESUME_DATA.workExperience);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">VOLUNTEER EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Science Conference Moderator & Participant</strong> | UBC</p>
-                        <span>Mar 2022</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Moderated sessions and presented findings at UBC’s science conference</li>
-                    </ul>
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Flute and Ensemble Lessons</strong> | Community & Private</p>
-                        <span>Sep 2016–Present</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Tutored flute students, led ensemble clinics, and conducted junior bands</li>
-                    </ul>
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Junior Summer Camp Counselor</strong> | BC SPCA</p>
-                        <span>Aug 2016–Aug 2017</span>
-                    </div>
-                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Educated children on animal welfare at BC SPCA summer camp</li>
-                    </ul>
+                    <div id="volunteer-experience"></div>
                 </div>
+                <script>renderEntries("volunteer-experience", RESUME_DATA.volunteerExperience);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">EDUCATION</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>B.Sc. Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year</strong></p>
-                        <span>Expected Graduation May 2027</span>
-                    </div>
-                    <p style="text-align: left; margin-top: 0;">University of British Columbia, Vancouver, BC</p>
+                    <div id="education"></div>
                 </div>
+                <script>renderEducation("education", RESUME_DATA.education);</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">CERTIFICATIONS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Standard First Aid & CPR/AED C</strong></p>
-                        <span>Jun 2025</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Workplace Hazardous Materials Information System Training</strong></p>
-                        <span>Feb 2024</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>National Lifeguard Pool Option</strong></p>
-                        <span>Jul 2023</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>WHMIS for Workers </strong></p>
-                        <span>May 2023</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>WorkSafe BC Workplace Safety</strong></p>
-                        <span>Feb 2019</span>
-                    </div>
+                    <div id="certifications"></div>
                 </div>
+                <script>renderCertifications("certifications", RESUME_DATA.certifications);</script>
             </div>
         </div>
         <div class="footer">
-            <p style="color: #002145;">Kiersten Lyde-Stad | <a href="mailto:k-lydestad@outlook.com">k-lydestad@outlook.com</a> | (604) 603-4429 </p>
+            <div id="footer-page2"></div>
+            <script>renderFooter("footer-page2");</script>
         </div>
     </div>
 </body>

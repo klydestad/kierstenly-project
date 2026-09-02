@@ -19,21 +19,27 @@ function renderSkillsTable(containerId, data) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  const labels = data
-    .map(c => `<p style="margin: 0;"><strong>${c.category}:</strong></p>`)
-    .join("\n");
-  const values = data
-    .map(c => `<p style="margin: 0;">${c.skills.join(", ")}</p>`)
-    .join("\n");
+  // Three CSS Grid columns per row: label (30%) | gutter (20%, empty) |
+  // value (50%) — mirrors the original 30%-column / 50%-left-offset
+  // layout, but keeps both columns in normal document flow. The earlier
+  // version positioned the value column with `position: absolute`, which
+  // takes it out of flow entirely: the row's height was then set only by
+  // the (short) label column, so once the value column grew past that
+  // height — as it will whenever the skills list is long — it silently
+  // overlapped whatever section came next instead of pushing it down.
+  // Grid rows auto-size to their tallest cell, so this can't happen here.
+  const rows = data
+    .map(
+      c => `
+        <p style="margin: 0; text-align: left;"><strong>${c.category}:</strong></p>
+        <div></div>
+        <p style="margin: 0; text-align: left;">${c.skills.join(", ")}</p>`
+    )
+    .join("");
 
   container.innerHTML = `
-    <div style="display: flex; width: 100%; position: relative;">
-        <div style="flex: 0 0 30%; display: flex; flex-direction: column; text-align: left;">
-            ${labels}
-        </div>
-        <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: left;">
-            ${values}
-        </div>
+    <div style="display: grid; grid-template-columns: 30% 20% 50%; width: 100%; row-gap: 2px;">
+        ${rows}
     </div>`;
 }
 
