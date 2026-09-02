@@ -22,4 +22,4 @@ As a computer science student, having a professional online presence is crucial.
 * Environment: VS Code
 * Key concepts: Responsive design, CSS Grid/Flexbox, JavaScript
 
-TODO: job app summary sheet, double check all docs, smooth and automate resume pdf generation 
+TODO: job app summary sheet, double check all docs, smooth and automate resume pdf generation, custom cursor
