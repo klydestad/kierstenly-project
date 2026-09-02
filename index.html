@@ -147,19 +147,29 @@
     </section>
 
     <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2024 Kiersten Lyde-Stad. All Rights Reserved.</p>
-    </footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2024 Kiersten Lyde-Stad. All Rights Reserved.</p>
+    <p id="last-updated"></p>
+</footer>
+
+<script src="last-updated.js"></script>
+<script>
+    if (typeof LAST_UPDATED !== 'undefined') {
+        document.getElementById('last-updated').textContent = 
+            'Last updated: ' + new Date(LAST_UPDATED).toLocaleDateString('en-US', 
+                { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    }
+</script>
 
     <!-- SCRIPTS -->
     <script src="info-data.js"></script>
