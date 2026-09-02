@@ -62,7 +62,7 @@ const INFO_DATA = {
             organization: "Terra Dygital Solutions Inc.",
             dateRange: "Jan–Aug 2026",
             bullets: [
-                "Engineered data pipelines in Microsoft Fabric with SQL Server, Power BI dashboards, and Azure Logic Apps across three clients",
+                "Engineered data pipelines in Microsoft Fabric with SQL Server, Power BI dashboards, Power Automate, and Azure Logic Apps",
                 "Developed Power Query transformations for reporting templates and data-driven applications with backend integration",
                 "Extended C#/.NET application architecture and built Python/C# automation pipeline (Selenium) for third-party data extraction and SQL Server loading",
                 "Gathered requirements through client meetings and produced technical documentation"
