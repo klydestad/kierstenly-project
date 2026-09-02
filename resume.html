@@ -39,14 +39,6 @@
             height: 1.5in; /* Set a fixed height for the header */
             overflow: visible; 
         }
-        .header img {
-            height: auto;
-            position: absolute;
-            right: -0.75in; /* Position 0.5 inches from the right edge of the content area */
-            top: 0;
-            width: 80%; /* Set width to 66% of the content area */
-            max-height: 100%; /* Ensure image doesn't exceed header height */
-        }
         .content {
             grid-column: content-start / content-end;
             grid-row: 2;
@@ -123,55 +115,57 @@
 </head>
 <body>
     <div class="page">
-        <div class="header">
-            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header">
-        </div>
         <div class="content">
             <div class="container center-text">
                 <p style="margin-top: 0; margin-bottom: 0; font-size: 22px;">Kiersten Lyde-Stad</p>
-                <p style="margin-top: 0; margin-bottom: 0;">Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year</p>
+                <p style="margin-top: 0; margin-bottom: 0;">Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year </p>
                 <p style="margin-top: 0; margin-bottom: 0;">
                     <a href="mailto:klyde-stad@outlook.com">klyde-stad@outlook.com</a> | (604) 603-4429 | 
                     <a href="https://github.com/klydestad">https://github.com/klydestad</a><br>
                     <a href="https://www.kierstenly.dev/">https://www.kierstenly.dev/</a> | <a href="https://www.linkedin.com/in/kierstenly/">www.linkedin.com/in/kierstenly</a>
                 </p>
+
+
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL SKILLS</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
-                    <div style="display: flex; width: 100%; position: relative;">
-                        <div style="flex: 0 0 30%; display: flex; flex-direction: column; text-align: left;">
-                            <p style="margin: 0;"><strong>Programming Languages:</strong></p>
-                            <p style="margin: 0;"><strong>Data Science & ML:</strong></p>
-                            <p style="margin: 0;"><strong>Web Development:</strong></p>
-                            <p style="margin: 0;"><strong>Tools & Platforms:</strong></p>
-                            <p style="margin: 0;"><strong>Testing & Development:</strong></p>
-                            <p style="margin: 0;"><strong>Environments:</strong></p>
-                        </div>
-                        <div style="position: absolute; left: 50%; transform: translateX(-50%); text-align: left;">
-                            <p style="margin: 0;">Python, R, SQL, Java, C++, C, TypeScript, LaTeX</p>
-                            <p style="margin: 0;">scikit-learn, pandas, NumPy, Matplotlib, Jupyter, MATLAB</p>
-                            <p style="margin: 0;">JavaScript, Node.js, HTML, CSS, Streamlit</p>
-                            <p style="margin: 0;">GitHub, Excel, SQL Workbench, Cloudflare, Workday</p>
-                            <p style="margin: 0;">JUnit, JSON, Mocha, Chai</p>
-                            <p style="margin: 0;">VS Code, IntelliJ IDEA, Overleaf</p>
-                        </div>
-                    </div>
+                    <div id="skills-table"></div>
                 </div>
+
+                <script src="skills-data.js"></script>
+                <script src="skills-render.js"></script>
+                <script>renderSkillsTable("skills-table");</script>
 
                 <div class="section">
                     <h2 style="text-align: left; margin-bottom: 0;">TECHNICAL WORK EXPERIENCE</h2>
                     <hr style="margin: 0; border-top: 1px solid black;">
+
+
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                        <p style="margin: 0;"><strong>Indigenous Procurement Administrator Co-op</strong> | UBC Finance </p>
-                        <span>Jan–Aug 2024</span>
+                        <p style="margin: 0;"><strong>Software Developer Part-time Contractor</strong> | Terra Dygital Solutions Inc.  </p>
+                        <span>Sep 2026–Present</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
-                        <li>Led data collection and analysis for UBC's Supply Chain Act report on labour risks</li>
-                        <li>Created SOPs and business plans to guide procurement and sustainability efforts</li>
-                        <li>Analyzed Workday Report and Excel spend data to support UBC sustainability initiatives</li>
-                        <li>Developed processes for identifying sustainable companies via web scraping and certification checks</li>
-                        <li class="tech-line"><strong>Technologies: </strong>SQL, Excel, Workday, Qualtrics, MS Office</li>
+                        <li>Continued building data pipelines in Microsoft Fabric and data models in SQL Server, and extending Power BI reporting, part-time following the co-op</li>
+                        <li>Extended a C#/.NET automation tool that authenticates against third-party APIs, parses report data, and loads it into SQL Server with validation testing</li>
+                        <li>Supported client requirements gathering and maintained technical documentation</li>
+                        <li class="tech-line"><strong>Technologies: </strong>C#, .NET, Python, SQL Server/SSMS, Power BI, Microsoft Fabric, Azure, REST APIs</li>
                     </ul>
+
+                    <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                        <p style="margin: 0;"><strong>Developer Co-op</strong> | Terra Dygital Solutions Inc. </p>
+                        <span>Jan–Aug 2026</span>
+                    </div>
+                    <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
+                        <li>Engineered data pipelines in Microsoft Fabric (Lakehouses, DataFlows) with SQL Server/SSMS-backed data models and Azure Logic Apps, and built Power BI reports and automated workflows for a client</li>
+                        <li>Wrote data transformation logic with Power Query to build reporting templates, and developed Power BI dashboards for data analysis across a second client engagement</li>
+                        <li>Developed data-driven applications (canvas and model-driven) integrating backend data sources for a third client</li>
+                        <li>Extended an existing C#/.NET console application's architecture (interfaces, helper classes) to migrate internal ticket-routing logic to a new platform, integrating external systems via configured REST API payload/endpoint logic, with Azure DevOps and Git for source control</li>
+                        <li>Built an end-to-end automation pipeline in Python and C# (Selenium) to authenticate against third-party systems, extract data via REST APIs and browser automation, and parse and load structured report data into SQL Server, including SQL view design and validation testing</li>
+                        <li>Gathered technical requirements through client-facing meetings across multiple engagements and produced technical and process documentation</li>
+                        <li class="tech-line"><strong>Technologies: </strong>C#, .NET, Python, Selenium, SQL Server/SSMS, REST APIs, Microsoft Fabric, Power BI, Azure Logic Apps, Azure DevOps, Git, Power Platform, SharePoint</li>
+                    </ul>
+
                 </div>
 
                 <div class="section">
@@ -248,10 +242,6 @@
     </div>
 
     <div class="page">
-        <div class="header">
-            <img src="./assets/ubc-science-coop-header.png" alt="UBC Science Co-op Header">
-        </div>
-        <div class="content">
         
         <br>
 
@@ -281,7 +271,7 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>Swim Instructor/Lifeguard</strong> | North Vancouver Recreation & Culture </p>
-                        <span>Sep 2019–Present</span>
+                        <span>Sep 2019–Jan 2024</span>
                     </div>
                     <ul style="padding-left: 40px; text-align: left; margin-top: 1px;">
                         <li>Collected and analyzed pool chemistry data, ensuring compliance with safety standards</li>
@@ -324,7 +314,7 @@
                     <hr style="margin: 0; border-top: 1px solid black;">
                     <div style="display: flex; justify-content: space-between; align-items: baseline;">
                         <p style="margin: 0;"><strong>B.Sc. Combined Major in Computer Science and Statistics, 4<sup>th</sup> Year</strong></p>
-                        <span>Expected Graduation 2026</span>
+                        <span>Expected Graduation May 2027</span>
                     </div>
                     <p style="text-align: left; margin-top: 0;">University of British Columbia, Vancouver, BC</p>
                 </div>

@@ -1,3 +1,4 @@
+
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
@@ -6,7 +7,6 @@ function toggleMenu() {
 }
 
 function generatePDF() {
-    // Fetch the HTML content
     fetch('resume.html')
       .then(response => response.text())
       .then(html => {
@@ -14,7 +14,15 @@ function generatePDF() {
         const container = document.createElement('div');
         container.innerHTML = html;
         document.body.appendChild(container);
-  
+
+        // innerHTML does NOT execute <script> tags from the fetched HTML,
+        // so the renderSkillsTable() call embedded in resume.html never runs
+        // here. Re-run it manually — skills-data.js and skills-render.js
+        // must be loaded on THIS page (add them in its <head>).
+        if (typeof renderSkillsTable === 'function') {
+          renderSkillsTable('skills-table');
+        }
+
         // Configure html2pdf options
         const opt = {
           margin:       10,
@@ -23,7 +31,7 @@ function generatePDF() {
           html2canvas:  { scale: 2, useCORS: true },
           jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-  
+
         // Generate PDF
         html2pdf().from(container).set(opt).save().then(() => {
           // Remove the temporary container after PDF generation
@@ -33,8 +41,7 @@ function generatePDF() {
       .catch(error => {
         console.error('Error generating PDF:', error);
       });
-  }
-
+}
 // Add this function to update the timestamp
 function updateLastModified() {
     const timestampElement = document.getElementById('timestamp');
